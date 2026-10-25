@@ -20,7 +20,9 @@ Playlist order (short → longer after the Jun pair). All portrait 1080×1920 un
 | 9 | `assets/mkt-bk-5-2-cloudwater-d2.mp4` | BK 5.2 Cloudwater (Draft 2.0).mp4 | `1oY-ZnSNFf0Cidia8qIE0QKjpzIK1xohe` | May24 | 13.9s · 26 MB | |
 | 10 | `assets/mkt-bk-4-2-purple-rice-d2.mp4` | BK 4.2 Purple Rice (Draft 2.0).mp4 | `1YIbQ7Z3aE42bs0G4p6huOfg-zUNkvwyv` | Apr24 | 20.7s · 48 MB | |
 | 11 | `assets/mkt-bk-7-3-ivan.mp4` | BK 7.3 Ivan (Draft 1.0).mp4 | `1cZeaHVO-q5P64fvQGk-g7IbMn-qmmCZc` | Jul24 | 24.9s · 70 MB | longest in set; still under 100 MB |
-| 12 | `assets/mkt-goodlooking-web.mp4` | 13 | `assets/mkt-sauce-web.mp4` | Poster | `assets/mkt-hero-poster.jpg` | (frame from 6.2) | — | — | — | Pins and Needles can / Black Kite mark |
+| 12 | `assets/mkt-goodlooking-web.mp4` | BK 9.1 Goodlooking web cut | `18xO_K6P6Us1SHWNeuaGrXCD1XLnK6tcf` | Sep24 | 44.9s · 19.3 MB | web under 100 MB; OUR Drive pack |
+| 13 | `assets/mkt-sauce-web.mp4` | BK 9.2 Sauce web cut | `1x3v5_Qzoo2Rs92Q7gdquPmA37wRK8nzX` | Sep24 | 27.2s · 17.2 MB | web under 100 MB; OUR Drive pack |
+| Poster | `assets/mkt-hero-poster.jpg` | (frame from 6.2) | — | — | — | Pins and Needles can / Black Kite mark |
 
 Same mute/autoplay + `prefers-reduced-motion` gate as prior pack. Cycles 1→13→1.
 
