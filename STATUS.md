@@ -43,3 +43,8 @@ claim_ge_99=false · staging Pages only · WP/DNS/Shak untouched · his photos/m
 - [x] Wire 9 new + keep 2 prior = 11-clip playlist
 - [x] VIDEO_PICKS + STATUS
 - [ ] Push Pages + Drive; report md5 + Drive to Chief
+
+## t975u hero cover (2026-10-25 ~20:47 Asia/Manila)
+- `.film-banner` object-fit: contain → **cover** (object-position center kept)
+- index md5-8 **bd5960e8**
+- Staging only; Shak RO; claim_ge_99=false; no APPLY
