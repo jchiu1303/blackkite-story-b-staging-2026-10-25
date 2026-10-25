@@ -41,3 +41,13 @@ No `href=""`. No bare `href="#"`. Anchors `#top` `#month` `#stills` `#bridge` al
 ## Source bugs fixed
 
 story-b footer/logo used `index.html`, `story-a.html`, `story-c.html` (wrong relative names even inside the pick pack). Staging maps logo → `#top` and Compare/A/C → live pick Pages URLs so pick main stays the compare surface.
+
+## t930u marketing home videos
+
+| path | status |
+|------|--------|
+| `assets/mkt-bk-6-1-oil-beer-draft-2-2.mp4` | OK — Drive `11y0JI9YaT9fx3m7TCU85dHhm3Cho32yb` |
+| `assets/mkt-bk-6-2-reverse-throw-web.mp4` | OK — from Drive `1Yyf0478M8byouikA9OVtfwGriF4cNaG7` (web scale) |
+| `assets/mkt-hero-poster.jpg` | OK — poster from 6.2 |
+| Soft `portrait-beer-*.mp4` | DROPPED from staging (replaced) |
+| Sep24 BK 9.1 / 9.2 | SKIPPED — over DownloadFile 100 MB (see VIDEO_PICKS.md) |

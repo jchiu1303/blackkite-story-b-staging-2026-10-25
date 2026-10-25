@@ -1,41 +1,34 @@
-# STATUS — Black Kite STAGING · design-2 story-b
+# STATUS — Black Kite STAGING · design-2 story-b + t930u marketing video
 
-- When: 2026-10-25 ~19:56 Asia/Manila
-- Seat: Implementer · Flash deepseek/deepseek-v4.1-flash-1017 for docs · Imp deterministic HTML rewrite (Flash invent of new HTML discarded)
-- Routing: Jev seat=self conf=0.555 skill_flag=none → Flash-first (GO D / conf under 0.6 Imp)
-- Jon GO: t929u · widget story_b · design-2 = story_b
-- Tip cite: vault tip 925d1cfd
-- Pack path: /workspace/blackkite-story-b-staging-2026-10-25/
-- Preview URL: https://jchiu1303.github.io/blackkite-story-b-staging-2026-10-25/
+- When: 2026-10-25 ~20:01 Asia/Manila
+- Seat: Implementer · Jev self 0.595 skill_flag=none · DownloadFile + local wire
+- Jon GO: t929u staging + t930u marketing video amend
+- Tip cite: vault 925d1cfd
+- Pack: /workspace/blackkite-story-b-staging-2026-10-25/
+- Preview: https://jchiu1303.github.io/blackkite-story-b-staging-2026-10-25/
 - Repo: https://github.com/jchiu1303/blackkite-story-b-staging-2026-10-25
-- Drive folder: https://drive.google.com/drive/folders/1sJQ-ypmCu64n-fgOJeZ13GRhfmgkimw-
-- Link audit path: /workspace/blackkite-story-b-staging-2026-10-25/LINK_AUDIT.md (Drive 1Dvok2STUaXC4_7WB239j7v08pMG-IECd)
-- Source story-b: /workspace/blackkite-shak-pick-pages-2026-10-19/story-b/index.html (untouched)
-- Pick (live, untouched): https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/
+- Drive pack folder: https://drive.google.com/drive/folders/1sJQ-ypmCu64n-fgOJeZ13GRhfmgkimw-
+- VIDEO_PICKS: /workspace/blackkite-story-b-staging-2026-10-25/VIDEO_PICKS.md
+- Link audit: /workspace/blackkite-story-b-staging-2026-10-25/LINK_AUDIT.md
+- Pick untouched: https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/
+
+## Marketing videos used
+1. BK 6.1 Oil Beer (Draft 2.2) — id `11y0JI9YaT9fx3m7TCU85dHhm3Cho32yb` → hero clip 1
+2. BK 6.2 Reverse Throw (Draft 2.1) — id `1Yyf0478M8byouikA9OVtfwGriF4cNaG7` → web 1080p hero clip 2 + poster frame
+
+## Skipped
+- BK 9.1 Goodlooking `1NZvi_ar5Lj9kMSNmdWt1RCo8wmuvUVJb` (~107 MB) — over DownloadFile 100 MB
+- BK 9.2 Sauce `1QX5J1ntXTu66sbvxAmVDIcXSeW-yqnJo` (~161 MB) — same
 
 ## Locks
-- claim_ge_99=false
-- Unique APPLY HOLD except this Pages staging preview
-- Staging not live WP · no DNS · no contact Shak · his photos only
-- No PASS / publish / prod invent
-- Pick pack + WP prod untouched
-
-## Spend
-- n_calls: 1 (Flash docs)
-- cost_est_usd: ~0.002
-- live_burn: Flash docs only; HTML path rewrite local
+claim_ge_99=false · staging Pages only · WP/DNS/Shak untouched · his photos/marketing only · no PASS invent · pick untouched
 
 ## Checksums (md5-8)
-- index.html: 0a4d9bf4
-- STATUS.md: 4f0b8a63
+- index.html: a84301e5
 
 ## Done-when
-- [x] Staging pack index = story-b feel
-- [x] Preview URL (gh-pages separate repo)
-- [x] Link audit written
-- [x] Interaction + rollback notes
-- [x] Drive docs uploaded
-- [ ] Reviewer gate (hand only — Imp does not start Reviewer)
-
-## Hand
-Reviewer: soft-gate this staging preview vs pick. Imp idle after LAND.
+- [x] List + pick Aug BK marketing for home
+- [x] Wire mute/autoplay + reduced-motion on staging
+- [x] Skip Sep24 oversized; note why
+- [x] Link audit + preview + rollback note
+- [ ] Reviewer re-gate optional after video amend
