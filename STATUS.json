@@ -1,33 +1,85 @@
 {
   "preview_url": "https://jchiu1303.github.io/blackkite-story-b-staging-2026-10-25/",
-  "md5_index_8": "a84301e5",
-  "md5_status_8": "6ed45068",
+  "md5_index_8": "d31b7514",
   "drive_folder": "1sJQ-ypmCu64n-fgOJeZ13GRhfmgkimw-",
-  "link_audit_drive": "1Dvok2STUaXC4_7WB239j7v08pMG-IECd",
   "repo": "https://github.com/jchiu1303/blackkite-story-b-staging-2026-10-25",
   "pick_untouched": "https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/",
   "claim_ge_99": false,
-  "t930u_used": [
+  "order": "t942u",
+  "playlist_len": 11,
+  "t942u_wired": [
     {
       "id": "11y0JI9YaT9fx3m7TCU85dHhm3Cho32yb",
-      "name": "BK 6.1 Oil Beer (Draft 2.2).mp4"
+      "name": "BK 6.1 Oil Beer (Draft 2.2).mp4",
+      "local": "mkt-bk-6-1-oil-beer-draft-2-2.mp4"
     },
     {
       "id": "1Yyf0478M8byouikA9OVtfwGriF4cNaG7",
       "name": "BK 6.2 Reverse Throw (Draft 2.1).mp4",
-      "web": "mkt-bk-6-2-reverse-throw-web.mp4"
+      "local": "mkt-bk-6-2-reverse-throw-web.mp4",
+      "web": true
+    },
+    {
+      "id": "1wnKFUEFGmP0q0ZIPJ4LrrYYOM4qJag4g",
+      "name": "BK 7.4 Clone (Draft 2.0).mp4",
+      "local": "mkt-bk-7-4-clone-d2.mp4"
+    },
+    {
+      "id": "13D-0A_jQOrt5eQTnJokpLRGFbhX_puKB",
+      "name": "BK 5.1 Jump (Draft 1.0).mp4",
+      "local": "mkt-bk-5-1-jump.mp4"
+    },
+    {
+      "id": "1aQSzzOAZHV14KQWdxyAdJc2XAQhk_Rhj",
+      "name": "BK 7.2 Magic Pizza (Draft 1.0).mp4",
+      "local": "mkt-bk-7-2-magic-pizza.mp4"
+    },
+    {
+      "id": "1qrDGRIuW4eFb4vLmrLl_0q7mC-X6Dr2O",
+      "name": "BK 4.1 Brew Boys (Draft 1.0).mp4",
+      "local": "mkt-bk-4-1-brew-boys.mp4"
+    },
+    {
+      "id": "121W2bhiyIn2MkPGx_zXLGZ8mOQ0LBbYp",
+      "name": "BK 4.3 Char Siu (Draft 3.1).mp4",
+      "local": "mkt-bk-4-3-char-siu-d31.mp4"
+    },
+    {
+      "id": "1UHlBJqsimhlLvrh0Pe8bRfkCL2kZSLt1",
+      "name": "BK 5.3 Pandan (Draft 1.0).mp4",
+      "local": "mkt-bk-5-3-pandan.mp4"
+    },
+    {
+      "id": "1oY-ZnSNFf0Cidia8qIE0QKjpzIK1xohe",
+      "name": "BK 5.2 Cloudwater (Draft 2.0).mp4",
+      "local": "mkt-bk-5-2-cloudwater-d2.mp4"
+    },
+    {
+      "id": "1YIbQ7Z3aE42bs0G4p6huOfg-zUNkvwyv",
+      "name": "BK 4.2 Purple Rice (Draft 2.0).mp4",
+      "local": "mkt-bk-4-2-purple-rice-d2.mp4"
+    },
+    {
+      "id": "1cZeaHVO-q5P64fvQGk-g7IbMn-qmmCZc",
+      "name": "BK 7.3 Ivan (Draft 1.0).mp4",
+      "local": "mkt-bk-7-3-ivan.mp4"
     }
   ],
-  "t930u_skipped": [
+  "t942u_skipped_over_cap": [
     {
       "id": "1NZvi_ar5Lj9kMSNmdWt1RCo8wmuvUVJb",
       "name": "BK 9.1 Goodlooking (Draft 3.0).mp4",
-      "why": "over_100mb_downloadfile"
+      "why": "reexport_wait"
     },
     {
       "id": "1QX5J1ntXTu66sbvxAmVDIcXSeW-yqnJo",
       "name": "BK 9.2 Sauce (Draft 1.0).mov",
-      "why": "over_100mb_downloadfile"
+      "why": "reexport_wait"
+    },
+    {
+      "id": "1jImJCsNXUlzEmjqIsBy2Gr8KWwm4IDgq",
+      "name": "BK 7.1 Sonnys (Draft 1.0).mp4",
+      "why": "over_100mb"
     }
   ]
 }
