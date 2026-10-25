@@ -1,8 +1,8 @@
-# STATUS — Black Kite STAGING · design-2 story-b + t942u MORE videos
+# STATUS — Black Kite STAGING · design-2 story-b + t942u MORE videos + t964u WEAKs
 
 - When: 2026-10-25 ~20:10 Asia/Manila
 - Seat: Implementer · Jev self 0.51 skill_flag=none · DownloadFile + local wire (Flash CLI no FS write — Imp applied docs)
-- Jon GO: t929u staging + t930u video + **t942u MORE videos**
+- Jon GO: t929u staging + t930u video + **t942u MORE videos + t964u WEAKs**
 - Tip cite: vault 925d1cfd
 - Pack: /workspace/blackkite-story-b-staging-2026-10-25/
 - Preview: https://jchiu1303.github.io/blackkite-story-b-staging-2026-10-25/
@@ -31,8 +31,12 @@
 ## Locks
 claim_ge_99=false · staging Pages only · WP/DNS/Shak untouched · his photos/marketing only · no PASS invent · pick untouched
 
+## t964u WEAKs
+- month-nav-overshoot FIXED (no snap fight; scroll-margin + hash handler)
+- LINK_AUDIT Critical refreshed to 11-clip VIDEO_PICKS set
+
 ## Checksums (md5-8)
-- index.html: d31b7514
+- index.html: 6b0f7d93 (was d31b7514 · t964u)
 
 ## Done-when
 - [x] List BK candidates under 100 MB across months

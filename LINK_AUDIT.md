@@ -1,53 +1,57 @@
-# LINK_AUDIT — Black Kite STAGING · design-2 story-b
+# LINK_AUDIT — Black Kite STAGING · design-2 story-b (t964u)
 
 Scope: `index.html` only (staging landing). Pack `/workspace/blackkite-story-b-staging-2026-10-25/`.
-Source rewrite kept story-b Film·Czechmate body; Flash invent of a new HTML was discarded.
+VIDEO_PICKS.md is source of truth for hero clips.
 
 ## a[href]
 
 | href | where | kind | status |
 |------|-------|------|--------|
-| `#top` | logo `.mark` | anchor | FIXED (was `index.html`) |
-| `#month` | nav Month | anchor | OK |
-| `#stills` | nav Stills | anchor | OK |
-| `#bridge` | nav Close | anchor | OK |
+| `#top` | logo `.mark` | anchor | OK |
+| `#month` | nav Month | anchor | FIXED t964u (scroll-snap removed; scroll-margin + hash handler) |
+| `#stills` | nav Stills | anchor | OK (+ same scroll-margin) |
+| `#bridge` | nav Close | anchor | OK (+ same scroll-margin) |
 | `https://fonts.googleapis.com` | preconnect | external | OK |
 | `https://fonts.gstatic.com` | preconnect | external | OK |
 | Google Fonts css2 Barlow/Newsreader/Outfit | stylesheet | external | OK |
-| `https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/` | footer Compare | external | FIXED (was `index.html`) |
-| `…/story-a/` | footer A | external | FIXED (was `story-a.html`) |
-| `…/story-c/` | footer C | external | FIXED (was `story-c.html`) |
+| `https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/` | footer Compare | external | OK |
+| `…/story-a/` | footer A | external | OK |
+| `…/story-c/` | footer C | external | OK |
 
 No `href=""`. No bare `href="#"`. Anchors `#top` `#month` `#stills` `#bridge` all exist.
 
-## Critical src / poster / JS clips
+## Critical src / poster / JS clips (SoT = VIDEO_PICKS · Oil Beer→Ivan)
 
 | path | where | status |
 |------|-------|--------|
-| `assets/czechmate-full.png` | video poster + promo + chip + chapter | OK (`../assets/` → `assets/`) |
-| `assets/portrait-beer-distillery.mp4` | `<source>` + clips[0] | OK |
-| `assets/portrait-beer-shelf.mp4` | clips[1] | OK |
-| `assets/portrait-beer-bar.mp4` | clips[2] | OK |
+| `assets/mkt-bk-6-1-oil-beer-draft-2-2.mp4` | `<source>` + clips[0] | OK |
+| `assets/mkt-bk-6-2-reverse-throw-web.mp4` | clips[1] | OK |
+| `assets/mkt-bk-7-4-clone-d2.mp4` | clips[2] | OK |
+| `assets/mkt-bk-5-1-jump.mp4` | clips[3] | OK |
+| `assets/mkt-bk-7-2-magic-pizza.mp4` | clips[4] | OK |
+| `assets/mkt-bk-4-1-brew-boys.mp4` | clips[5] | OK |
+| `assets/mkt-bk-4-3-char-siu-d31.mp4` | clips[6] | OK |
+| `assets/mkt-bk-5-3-pandan.mp4` | clips[7] | OK |
+| `assets/mkt-bk-5-2-cloudwater-d2.mp4` | clips[8] | OK |
+| `assets/mkt-bk-4-2-purple-rice-d2.mp4` | clips[9] | OK |
+| `assets/mkt-bk-7-3-ivan.mp4` | clips[10] | OK |
+| `assets/mkt-hero-poster.jpg` | video poster | OK |
+| `assets/czechmate-full.png` | promo + chip + chapter | OK |
 | `assets/skybound.jpg` | chip + chapter Skybound | OK |
 | `assets/badass-full.png` | chip + chapter Badass | OK |
 
-## Dropped vs picker (expected — landing-only staging)
+## Dropped / not Critical
 
-- Picker root cards → `story-a/` `story-b/` `story-c/`
-- `assets/soft-placeholders.css`, `preview-a.jpg` `preview-b.jpg` `preview-c.jpg`
-- Local sibling story folders and pick README baseline blurb on the picker page
-- Beers/assets used only by A/C (wide dual videos, reel-*, glider, czechmate.jpg thumb, etc.)
+- Soft `portrait-beer-*.mp4` — removed from staging (replaced by marketing heroes); not Critical.
+- Sep24 BK 9.1 Goodlooking / 9.2 Sauce — SKIPPED over 100 MB (see VIDEO_PICKS); not on page.
+- Picker-only assets (soft-placeholders, preview-a/b/c, A/C dual videos) — out of staging scope.
 
-## Source bugs fixed
+## t964u WEAK fixes
 
-story-b footer/logo used `index.html`, `story-a.html`, `story-c.html` (wrong relative names even inside the pick pack). Staging maps logo → `#top` and Compare/A/C → live pick Pages URLs so pick main stays the compare surface.
+1. month-nav-overshoot — removed `scroll-snap-type` / film `scroll-snap-align`; set `scroll-padding-top` + `#month/#stills/#bridge` `scroll-margin-top`; hash click uses `scrollIntoView`.
+2. link-audit-critical-stale — Critical table now lists current 11-clip set; portrait-beer rows dropped.
 
-## t930u marketing home videos
+## Locks
+Staging only · WP/DNS/pick untouched · Shak Drive RO (t961u) · claim_ge_99=false · no PASS invent.
 
-| path | status |
-|------|--------|
-| `assets/mkt-bk-6-1-oil-beer-draft-2-2.mp4` | OK — Drive `11y0JI9YaT9fx3m7TCU85dHhm3Cho32yb` |
-| `assets/mkt-bk-6-2-reverse-throw-web.mp4` | OK — from Drive `1Yyf0478M8byouikA9OVtfwGriF4cNaG7` (web scale) |
-| `assets/mkt-hero-poster.jpg` | OK — poster from 6.2 |
-| Soft `portrait-beer-*.mp4` | DROPPED from staging (replaced) |
-| Sep24 BK 9.1 / 9.2 | SKIPPED — over DownloadFile 100 MB (see VIDEO_PICKS.md) |
+index.md5-8 after t964u: `6b0f7d93`

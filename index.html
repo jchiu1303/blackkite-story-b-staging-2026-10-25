@@ -18,8 +18,10 @@
   * { box-sizing: border-box; }
   html {
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
-    scroll-padding-top: var(--ban);
+    scroll-padding-top: calc(var(--ban) + 12px);
+  }
+  #month, #stills, #bridge {
+    scroll-margin-top: calc(var(--ban) + 12px);
   }
   html, body { margin: 0; background: var(--ground); color: var(--cream); font-family: Newsreader, Palatino, Georgia, serif; }
   img { display: block; max-width: 100%; height: auto; }
@@ -37,7 +39,7 @@
   .film {
     position: relative; height: calc(100svh - var(--ban)); min-height: 640px;
     display: grid; grid-template-columns: 1.05fr .95fr;
-    background: var(--ground); scroll-snap-align: start; overflow: hidden;
+    background: var(--ground); overflow: hidden;
   }
   .film-video { position: relative; min-height: 0; overflow: hidden; background: #0c0b09; }
   .film-banner {
@@ -369,6 +371,29 @@
     i = (i + 1) % clips.length;
     v.src = clips[i];
     v.play().catch(function () {});
+  });
+})();
+</script>
+<script>
+(function () {
+  function goHash(hash) {
+    if (!hash || hash === "#") return;
+    var el = document.querySelector(hash);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var href = a.getAttribute("href");
+    if (!href || href === "#") return;
+    e.preventDefault();
+    if (history.pushState) history.pushState(null, "", href);
+    else location.hash = href;
+    requestAnimationFrame(function () { goHash(href); });
+  });
+  window.addEventListener("load", function () {
+    if (location.hash) requestAnimationFrame(function () { goHash(location.hash); });
   });
 })();
 </script>
