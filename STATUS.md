@@ -1,9 +1,8 @@
-# STATUS — Black Kite STAGING · design-2 story-b + t942u MORE videos + t964u WEAKs
+# STATUS — Black Kite STAGING · design-2 story-b + t973u Goodlooking/Sauce web
 
-- When: 2026-10-25 ~20:10 Asia/Manila
-- Seat: Implementer · Jev self 0.51 skill_flag=none · DownloadFile + local wire (Flash CLI no FS write — Imp applied docs)
-- Jon GO: t929u staging + t930u video + **t942u MORE videos + t964u WEAKs**
-- Tip cite: vault 925d1cfd
+- When: 2026-10-25 ~21:01 Asia/Manila
+- Seat: Implementer · Jev grunt 0.61 overridden (Imp Flash under GO D) · skill_flag=none
+- Jon GO: t929u + t930u + t942u + t964u + t975u cover + **t973u Goodlooking/Sauce web**
 - Pack: /workspace/blackkite-story-b-staging-2026-10-25/
 - Preview: https://jchiu1303.github.io/blackkite-story-b-staging-2026-10-25/
 - Repo: https://github.com/jchiu1303/blackkite-story-b-staging-2026-10-25
@@ -11,7 +10,7 @@
 - VIDEO_PICKS: /workspace/blackkite-story-b-staging-2026-10-25/VIDEO_PICKS.md
 - Pick untouched: https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/
 
-## Marketing videos on hero playlist (11)
+## Marketing videos on hero playlist (13)
 1. Oil Beer 6.1 Draft 2.2
 2. Reverse Throw 6.2-web
 3. Clone 7.4 Draft 2.0
@@ -23,28 +22,19 @@
 9. Cloudwater 5.2 Draft 2.0
 10. Purple Rice 4.2 Draft 2.0
 11. Ivan 7.3
+12. Goodlooking 9.1-web (md5 b2c7e567 · Drive 18xO_K6P6Us1SHWNeuaGrXCD1XLnK6tcf)
+13. Sauce 9.2-web (md5 48db7f39 · Drive 1x3v5_Qzoo2Rs92Q7gdquPmA37wRK8nzX)
 
-## Still skipped (re-export)
-- Goodlooking 9.1 · Sauce 9.2 (>100 MB)
+## Still skipped
 - Sonnys 7.1 (~241 MB) · March BK 1.x (>180 MB)
 
 ## Locks
-claim_ge_99=false · staging Pages only · WP/DNS/Shak untouched · his photos/marketing only · no PASS invent · pick untouched
-
-## t964u WEAKs
-- month-nav-overshoot FIXED (no snap fight; scroll-margin + hash handler)
-- LINK_AUDIT Critical refreshed to 11-clip VIDEO_PICKS set
+claim_ge_99=false · staging Pages only · WP/DNS/Shak RO · his photos/marketing only · no PASS invent · pick untouched · `.film-banner` object-fit:cover
 
 ## Checksums (md5-8)
-- index.html: 6b0f7d93 (was d31b7514 · t964u)
+- index.html: e47db799
+- mkt-goodlooking-web.mp4: b2c7e567
+- mkt-sauce-web.mp4: 48db7f39
 
-## Done-when
-- [x] List BK candidates under 100 MB across months
-- [x] Wire 9 new + keep 2 prior = 11-clip playlist
-- [x] VIDEO_PICKS + STATUS
-- [ ] Push Pages + Drive; report md5 + Drive to Chief
-
-## t975u hero cover (2026-10-25 ~20:47 Asia/Manila)
-- `.film-banner` object-fit: contain → **cover** (object-position center kept)
-- index md5-8 **bd5960e8**
-- Staging only; Shak RO; claim_ge_99=false; no APPLY
+## t973u
+- Copied web cuts into assets/; appended clips[11]/[12]; VIDEO_PICKS/LINK_AUDIT/STATUS updated

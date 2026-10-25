@@ -20,7 +20,7 @@ VIDEO_PICKS.md is source of truth for hero clips.
 
 No `href=""`. No bare `href="#"`. Anchors `#top` `#month` `#stills` `#bridge` all exist.
 
-## Critical src / poster / JS clips (SoT = VIDEO_PICKS · Oil Beer→Ivan)
+## Critical src / poster / JS clips (SoT = VIDEO_PICKS · Oil Beer→Sauce (13))
 
 | path | where | status |
 |------|-------|--------|
@@ -35,6 +35,8 @@ No `href=""`. No bare `href="#"`. Anchors `#top` `#month` `#stills` `#bridge` al
 | `assets/mkt-bk-5-2-cloudwater-d2.mp4` | clips[8] | OK |
 | `assets/mkt-bk-4-2-purple-rice-d2.mp4` | clips[9] | OK |
 | `assets/mkt-bk-7-3-ivan.mp4` | clips[10] | OK |
+| `assets/mkt-goodlooking-web.mp4` | clips[11] | OK |
+| `assets/mkt-sauce-web.mp4` | clips[12] | OK |
 | `assets/mkt-hero-poster.jpg` | video poster | OK |
 | `assets/czechmate-full.png` | promo + chip + chapter | OK |
 | `assets/skybound.jpg` | chip + chapter Skybound | OK |
@@ -43,13 +45,13 @@ No `href=""`. No bare `href="#"`. Anchors `#top` `#month` `#stills` `#bridge` al
 ## Dropped / not Critical
 
 - Soft `portrait-beer-*.mp4` — removed from staging (replaced by marketing heroes); not Critical.
-- Sep24 BK 9.1 Goodlooking / 9.2 Sauce — SKIPPED over 100 MB (see VIDEO_PICKS); not on page.
+- Sep24 BK 9.1/9.2 originals skipped; **web cuts wired t973u** (`mkt-goodlooking-web` / `mkt-sauce-web`).
 - Picker-only assets (soft-placeholders, preview-a/b/c, A/C dual videos) — out of staging scope.
 
 ## t964u WEAK fixes
 
 1. month-nav-overshoot — removed `scroll-snap-type` / film `scroll-snap-align`; set `scroll-padding-top` + `#month/#stills/#bridge` `scroll-margin-top`; hash click uses `scrollIntoView`.
-2. link-audit-critical-stale — Critical table now lists current 11-clip set; portrait-beer rows dropped.
+2. link-audit-critical-stale — Critical table now lists current 13-clip set; portrait-beer rows dropped.
 
 ## Locks
 Staging only · WP/DNS/pick untouched · Shak Drive RO (t961u) · claim_ge_99=false · no PASS invent.

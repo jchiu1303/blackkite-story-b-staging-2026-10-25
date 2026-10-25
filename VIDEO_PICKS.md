@@ -1,4 +1,4 @@
-# VIDEO_PICKS — story-b staging home (Jon t942u)
+# VIDEO_PICKS — story-b staging home (Jon t942u + t973u Goodlooking/Sauce web)
 
 Source parent (resolved): Drive folder `1O83Ml1o9b5YLO67zok2oUf5yKQKCsh23` (Konrad Neon and Black Kite Content).
 Shortcut cited: `1bPFCj5-vp4J9gnX_I_LJiqKvvXFWRWJp`.
@@ -20,16 +20,14 @@ Playlist order (short → longer after the Jun pair). All portrait 1080×1920 un
 | 9 | `assets/mkt-bk-5-2-cloudwater-d2.mp4` | BK 5.2 Cloudwater (Draft 2.0).mp4 | `1oY-ZnSNFf0Cidia8qIE0QKjpzIK1xohe` | May24 | 13.9s · 26 MB | |
 | 10 | `assets/mkt-bk-4-2-purple-rice-d2.mp4` | BK 4.2 Purple Rice (Draft 2.0).mp4 | `1YIbQ7Z3aE42bs0G4p6huOfg-zUNkvwyv` | Apr24 | 20.7s · 48 MB | |
 | 11 | `assets/mkt-bk-7-3-ivan.mp4` | BK 7.3 Ivan (Draft 1.0).mp4 | `1cZeaHVO-q5P64fvQGk-g7IbMn-qmmCZc` | Jul24 | 24.9s · 70 MB | longest in set; still under 100 MB |
-| Poster | `assets/mkt-hero-poster.jpg` | (frame from 6.2) | — | — | — | Pins and Needles can / Black Kite mark |
+| 12 | `assets/mkt-goodlooking-web.mp4` | 13 | `assets/mkt-sauce-web.mp4` | Poster | `assets/mkt-hero-poster.jpg` | (frame from 6.2) | — | — | — | Pins and Needles can / Black Kite mark |
 
-Same mute/autoplay + `prefers-reduced-motion` gate as prior pack. Cycles 1→11→1.
+Same mute/autoplay + `prefers-reduced-motion` gate as prior pack. Cycles 1→13→1.
 
 ## Skipped (candidates listed)
 
 | Drive name | Drive id | Size | Why |
 |------------|----------|------|-----|
-| BK 9.1 Goodlooking (Draft 3.0).mp4 | `1NZvi_ar5Lj9kMSNmdWt1RCo8wmuvUVJb` | ~107 MB | Sep24 — over DownloadFile 100 MB; wait Jon re-export |
-| BK 9.2 Sauce (Draft 1.0).mov | `1QX5J1ntXTu66sbvxAmVDIcXSeW-yqnJo` | ~161 MB | Sep24 — same |
 | BK 7.1 Sonnys (Draft 1.0 / 2.0).mp4 | `1jImJCsNXUlzEmjqIsBy2Gr8KWwm4IDgq` / `1F3dxgDAS4SzmWwLPPM9rTCzLviluhNNE` | ~241 MB each | Jul24 — over cap |
 | BK 7.4 Clone (Draft 1.0).mp4 | `1HdXRwXTbZuaCjxgZTY7MMMDE65e7KjvZ` | ~68 MB | Prefer Draft 2.0 (wired) |
 | BK 1.x Agape / Char Siu / Perspective (Mar24) | various | >180 MB | over cap |

@@ -1,12 +1,12 @@
 {
   "preview_url": "https://jchiu1303.github.io/blackkite-story-b-staging-2026-10-25/",
-  "md5_index_8": "6b0f7d93",
+  "md5_index_8": "e47db799",
   "drive_folder": "1sJQ-ypmCu64n-fgOJeZ13GRhfmgkimw-",
   "repo": "https://github.com/jchiu1303/blackkite-story-b-staging-2026-10-25",
   "pick_untouched": "https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/",
   "claim_ge_99": false,
-  "order": "t964u",
-  "playlist_len": 11,
+  "order": "t973u",
+  "playlist_len": 13,
   "t942u_wired": [
     {
       "id": "11y0JI9YaT9fx3m7TCU85dHhm3Cho32yb",
@@ -63,19 +63,21 @@
       "id": "1cZeaHVO-q5P64fvQGk-g7IbMn-qmmCZc",
       "name": "BK 7.3 Ivan (Draft 1.0).mp4",
       "local": "mkt-bk-7-3-ivan.mp4"
+    },
+    {
+      "id": "18xO_K6P6Us1SHWNeuaGrXCD1XLnK6tcf",
+      "name": "BK 9.1 Goodlooking web",
+      "local": "mkt-goodlooking-web.mp4",
+      "web": true
+    },
+    {
+      "id": "1x3v5_Qzoo2Rs92Q7gdquPmA37wRK8nzX",
+      "name": "BK 9.2 Sauce web",
+      "local": "mkt-sauce-web.mp4",
+      "web": true
     }
   ],
   "t942u_skipped_over_cap": [
-    {
-      "id": "1NZvi_ar5Lj9kMSNmdWt1RCo8wmuvUVJb",
-      "name": "BK 9.1 Goodlooking (Draft 3.0).mp4",
-      "why": "reexport_wait"
-    },
-    {
-      "id": "1QX5J1ntXTu66sbvxAmVDIcXSeW-yqnJo",
-      "name": "BK 9.2 Sauce (Draft 1.0).mov",
-      "why": "reexport_wait"
-    },
     {
       "id": "1jImJCsNXUlzEmjqIsBy2Gr8KWwm4IDgq",
       "name": "BK 7.1 Sonnys (Draft 1.0).mp4",
@@ -87,7 +89,19 @@
     "link_audit": "critical_refreshed_11_clip",
     "prior_md5": "d31b7514"
   },
-  "last_tip": "t975u",
-  "index_md5_8": "bd5960e8",
-  "note": "film-banner object-fit cover; staging only"
+  "last_tip": "t973u",
+  "index_md5_8": "e47db799",
+  "note": "t973u Goodlooking+Sauce web wired; film-banner cover; staging only",
+  "t973u": {
+    "goodlooking": {
+      "local": "mkt-goodlooking-web.mp4",
+      "md5_8": "b2c7e567",
+      "drive": "18xO_K6P6Us1SHWNeuaGrXCD1XLnK6tcf"
+    },
+    "sauce": {
+      "local": "mkt-sauce-web.mp4",
+      "md5_8": "48db7f39",
+      "drive": "1x3v5_Qzoo2Rs92Q7gdquPmA37wRK8nzX"
+    }
+  }
 }
