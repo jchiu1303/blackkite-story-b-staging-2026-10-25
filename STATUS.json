@@ -1,11 +1,11 @@
 {
   "preview_url": "https://jchiu1303.github.io/blackkite-story-b-staging-2026-10-25/",
-  "md5_index_8": "e47db799",
+  "md5_index_8": "dc52b1f9",
   "drive_folder": "1sJQ-ypmCu64n-fgOJeZ13GRhfmgkimw-",
   "repo": "https://github.com/jchiu1303/blackkite-story-b-staging-2026-10-25",
   "pick_untouched": "https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/",
   "claim_ge_99": false,
-  "order": "t973u",
+  "order": "JobA-lean",
   "playlist_len": 13,
   "t942u_wired": [
     {
@@ -89,9 +89,9 @@
     "link_audit": "critical_refreshed_11_clip",
     "prior_md5": "d31b7514"
   },
-  "last_tip": "t973u",
-  "index_md5_8": "e47db799",
-  "note": "t973u Goodlooking+Sauce web wired; film-banner cover; staging only",
+  "last_tip": "JobA-lean",
+  "index_md5_8": "dc52b1f9",
+  "note": "Job A lean playlist wired; preload=none; originals kept; Shak RO",
   "t973u": {
     "goodlooking": {
       "local": "mkt-goodlooking-web.mp4",
@@ -103,5 +103,93 @@
       "md5_8": "48db7f39",
       "drive": "1x3v5_Qzoo2Rs92Q7gdquPmA37wRK8nzX"
     }
+  },
+  "lean": {
+    "recipe": "an libx264 yuv420p scale1080 CRF28; OilBeer CRF32+2.5M",
+    "sizes_tsv": "LEAN_SIZES.tsv",
+    "prior_index_md5_8": "e47db799",
+    "clips": [
+      {
+        "local": "mkt-bk-6-1-oil-beer-draft-2-2-lean.mp4",
+        "before_mib": 8.58,
+        "after_mib": 0.54
+      },
+      {
+        "local": "mkt-bk-6-2-reverse-throw-web-lean.mp4",
+        "before_mib": 1.22,
+        "after_mib": 0.64
+      },
+      {
+        "local": "mkt-bk-7-4-clone-d2-lean.mp4",
+        "before_mib": 12.71,
+        "after_mib": 1.02
+      },
+      {
+        "local": "mkt-bk-5-1-jump-lean.mp4",
+        "before_mib": 17.14,
+        "after_mib": 2.18
+      },
+      {
+        "local": "mkt-bk-7-2-magic-pizza-lean.mp4",
+        "before_mib": 21.29,
+        "after_mib": 2.07
+      },
+      {
+        "local": "mkt-bk-4-1-brew-boys-lean.mp4",
+        "before_mib": 20.23,
+        "after_mib": 3.77
+      },
+      {
+        "local": "mkt-bk-4-3-char-siu-d31-lean.mp4",
+        "before_mib": 22.47,
+        "after_mib": 2.25
+      },
+      {
+        "local": "mkt-bk-5-3-pandan-lean.mp4",
+        "before_mib": 32.14,
+        "after_mib": 3.91
+      },
+      {
+        "local": "mkt-bk-5-2-cloudwater-d2-lean.mp4",
+        "before_mib": 25.71,
+        "after_mib": 4.11
+      },
+      {
+        "local": "mkt-bk-4-2-purple-rice-d2-lean.mp4",
+        "before_mib": 47.01,
+        "after_mib": 4.66
+      },
+      {
+        "local": "mkt-bk-7-3-ivan-lean.mp4",
+        "before_mib": 69.56,
+        "after_mib": 2.34
+      },
+      {
+        "local": "mkt-goodlooking-web-lean.mp4",
+        "before_mib": 19.32,
+        "after_mib": 10.23
+      },
+      {
+        "local": "mkt-sauce-web-lean.mp4",
+        "before_mib": 17.18,
+        "after_mib": 6.87
+      }
+    ],
+    "drive_ids": {
+      "mkt-bk-6-1-oil-beer-draft-2-2-lean.mp4": "11xwv7sHJSR54uezpDdz3j6cllzZl1uN-",
+      "mkt-bk-6-2-reverse-throw-web-lean.mp4": "1rR77JenvauI3A29s0-9zbKvdMs0u09o6",
+      "mkt-bk-7-4-clone-d2-lean.mp4": "141y1wSFwSl8FiD0lw7FXYVZ7-vy9bEvu",
+      "mkt-bk-5-1-jump-lean.mp4": "1X9PJmmgkDkos7gGM_36Z-4-_Ip3aOAjq",
+      "mkt-bk-7-2-magic-pizza-lean.mp4": "1B-G9bbqQYyBKx-AcfSWf9XKFBEX3QfMg",
+      "mkt-bk-4-1-brew-boys-lean.mp4": "1dupkXFjg0U6Fze-bLDLGgCwUsPcBBx0e",
+      "mkt-bk-4-3-char-siu-d31-lean.mp4": "1T3Iytg1TNJCFAYITLR_RwQrqp3lRtQQO",
+      "mkt-bk-5-3-pandan-lean.mp4": "12FSH2LGF7ILdyP8DahueyCcWYjXPr8CI",
+      "mkt-bk-5-2-cloudwater-d2-lean.mp4": "1BkKAODFYhzRYrejQSanfXsYCApJsR4oE",
+      "mkt-bk-4-2-purple-rice-d2-lean.mp4": "1bjxyFcDlBC9wG0PtWYGRaqHmzh7lEbYw",
+      "mkt-bk-7-3-ivan-lean.mp4": "1R9SYzszppyQ5tqYoP0thDBLnmuU8ScPP",
+      "mkt-goodlooking-web-lean.mp4": "1qujfkOLdJu9ZUTh-gkfGfH1eSYeqCy-d",
+      "mkt-sauce-web-lean.mp4": "1GTrbAR2ySV6HF8VFfRXyzqSeWvzcCz9j"
+    },
+    "drive_folder": "1sJQ-ypmCu64n-fgOJeZ13GRhfmgkimw-"
   }
 }
