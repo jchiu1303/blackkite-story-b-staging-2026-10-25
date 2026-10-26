@@ -368,10 +368,67 @@
   var i = 0;
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reduce) { v.pause(); v.removeAttribute("autoplay"); return; }
+
+  var preload = document.createElement("video");
+  preload.muted = true;
+  preload.playsInline = true;
+  preload.preload = "auto";
+  preload.setAttribute("aria-hidden", "true");
+  preload.setAttribute("playsinline", "");
+  preload.style.cssText = "position:absolute;width:0;height:0;opacity:0;pointer-events:none;left:-9999px";
+  (v.parentNode || document.body).appendChild(preload);
+
+  function clearPoster() {
+    v.removeAttribute("poster");
+    try { v.poster = ""; } catch (e) {}
+  }
+
+  function prepNext() {
+    var n = (i + 1) % clips.length;
+    var url = clips[n];
+    if (preload.getAttribute("data-clip") === url) return;
+    preload.setAttribute("data-clip", url);
+    preload.src = url;
+    preload.load();
+  }
+
+  function playSafe() {
+    var p = v.play();
+    if (p && p.catch) p.catch(function () {});
+  }
+
+  function swapTo(url) {
+    clearPoster();
+    v.src = url;
+    playSafe();
+    prepNext();
+  }
+
+  v.addEventListener("playing", clearPoster, { once: true });
+  v.addEventListener("loadeddata", prepNext, { once: true });
+  if (v.readyState >= 2) prepNext();
+
   v.addEventListener("ended", function () {
     i = (i + 1) % clips.length;
-    v.src = clips[i];
-    v.play().catch(function () {});
+    var url = clips[i];
+    function whenReady(fn) {
+      if (preload.getAttribute("data-clip") === url && preload.readyState >= 3) {
+        fn();
+        return;
+      }
+      if (preload.getAttribute("data-clip") !== url) {
+        preload.setAttribute("data-clip", url);
+        preload.src = url;
+        preload.load();
+      }
+      var onReady = function () {
+        preload.removeEventListener("canplay", onReady);
+        fn();
+      };
+      preload.addEventListener("canplay", onReady);
+    }
+    // Keep last frame visible (poster already cleared) until next canplay.
+    whenReady(function () { swapTo(url); });
   });
 })();
 </script>

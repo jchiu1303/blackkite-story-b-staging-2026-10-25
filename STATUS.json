@@ -1,11 +1,11 @@
 {
   "preview_url": "https://jchiu1303.github.io/blackkite-story-b-staging-2026-10-25/",
-  "md5_index_8": "0c78d700",
+  "md5_index_8": "e8ca6050",
   "drive_folder": "1sJQ-ypmCu64n-fgOJeZ13GRhfmgkimw-",
   "repo": "https://github.com/jchiu1303/blackkite-story-b-staging-2026-10-25",
   "pick_untouched": "https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/",
   "claim_ge_99": false,
-  "order": "t17u-revert-lean",
+  "order": "t22u-no-poster-flash",
   "playlist_len": 13,
   "t942u_wired": [
     {
@@ -89,9 +89,9 @@
     "link_audit": "critical_refreshed_11_clip",
     "prior_md5": "d31b7514"
   },
-  "last_tip": "t17u+t18u",
-  "index_md5_8": "0c78d700",
-  "note": "t17u+t18u: sell line removed; hero playlist prior web cuts; lean off (files unused on disk); Shak RO; claim_ge_99=false",
+  "last_tip": "t22u",
+  "index_md5_8": "e8ca6050",
+  "note": "t22u: no inter-clip poster flash (clear poster + preload next; swap on canplay); t17u lean off + sell removed; Shak RO; claim_ge_99=false",
   "t973u": {
     "goodlooking": {
       "local": "mkt-goodlooking-web.mp4",

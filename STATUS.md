@@ -40,6 +40,10 @@ claim_ge_99=false · staging Pages only · WP/DNS/Shak RO · his photos/marketin
 - index.html: 0c78d700 (was dc52b1f9)
 - Job B captions: HOLD (await Chief shortlist)
 
+## t22u
+- Inter-clip poster flash fixed: clear poster on first play; hidden preload `<video>`; swap on `ended` only after next `canplay` (last frame / `#0c0b09` until swap)
+- index.md5-8: e8ca6050
+
 ## t17u+t18u
 - Removed exact sell `<p class="sell">…</p>`
 - Reverted playlist lean → prior web cuts; lean files unused on disk
