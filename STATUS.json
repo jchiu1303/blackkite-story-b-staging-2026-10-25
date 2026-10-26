@@ -1,11 +1,11 @@
 {
   "preview_url": "https://jchiu1303.github.io/blackkite-story-b-staging-2026-10-25/",
-  "md5_index_8": "1aa4c19d",
+  "md5_index_8": "88bd9d3b",
   "drive_folder": "1sJQ-ypmCu64n-fgOJeZ13GRhfmgkimw-",
   "repo": "https://github.com/jchiu1303/blackkite-story-b-staging-2026-10-25",
   "pick_untouched": "https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/",
   "claim_ge_99": false,
-  "order": "t29u-first-paint",
+  "order": "t35u-object-position",
   "playlist_len": 13,
   "t942u_wired": [
     {
@@ -210,5 +210,6 @@
     "mkt-sauce-web.mp4"
   ],
   "t29u_first_paint_poster": "assets/mkt-oil-beer-frame0.jpg",
-  "t29u_note": "no blue can on cold load; poster=oil-beer frame0; preload=auto"
+  "t29u_note": "no blue can on cold load; poster=oil-beer frame0; preload=auto",
+  "t35u_object_position": "center 28%"
 }
