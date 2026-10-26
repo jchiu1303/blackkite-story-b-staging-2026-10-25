@@ -10,7 +10,7 @@ Hero uses prior web cuts (non-lean). Lean `*-lean.mp4` files retained on disk un
 
 | # | Local asset | Drive name | Drive id | Month | Dur · size MiB | Notes |
 |---|-------------|------------|----------|-------|----------------|-------|
-| 1 (start) | `assets/mkt-bk-6-1-oil-beer-draft-2-2.mp4` | BK 6.1 Oil Beer (Draft 2.2).mp4 | `11y0JI9YaT9fx3m7TCU85dHhm3Cho32yb` | Jun24 | 4.2s · 8.58 | food↔beer |
+| 1 (start) | `assets/mkt-bk-4-3-blue-taxi-web.mp4` | BK 4.3 - Blue Taxi (Draft 1.1).mp4 | `14teBh6FM9p_3ri_igw2w-sSRUlyer8Du` | Apr24 | 10.8s · 6.93 | web cut 1080×1920; taxi/ferry; new start (oil-beer dropped) |
 | 2 | `assets/mkt-bk-6-2-reverse-throw-web.mp4` | from BK 6.2 Reverse Throw (Draft 2.1).mp4 | `1Yyf0478M8byouikA9OVtfwGriF4cNaG7` | Jun24 | 5.5s · 1.22 | ends on BK can |
 | 3 | `assets/mkt-bk-7-4-clone-d2.mp4` | BK 7.4 Clone (Draft 2.0).mp4 | `1wnKFUEFGmP0q0ZIPJ4LrrYYOM4qJag4g` | Jul24 | 6.8s · 12.71 | prefer over Draft 1.0 |
 | 4 | `assets/mkt-bk-5-1-jump.mp4` | BK 5.1 Jump (Draft 1.0).mp4 | `13D-0A_jQOrt5eQTnJokpLRGFbhX_puKB` | May24 | 7.2s · 17.14 | |
@@ -23,14 +23,16 @@ Hero uses prior web cuts (non-lean). Lean `*-lean.mp4` files retained on disk un
 | 11 | `assets/mkt-bk-7-3-ivan.mp4` | BK 7.3 Ivan (Draft 1.0).mp4 | `1cZeaHVO-q5P64fvQGk-g7IbMn-qmmCZc` | Jul24 | 24.9s · 69.56 | |
 | 12 | `assets/mkt-goodlooking-web.mp4` | BK 9.1 Goodlooking web | `18xO_K6P6Us1SHWNeuaGrXCD1XLnK6tcf` | Sep24 | 44.9s · 19.32 | OUR Drive pack |
 | 13 | `assets/mkt-sauce-web.mp4` | BK 9.2 Sauce web | `1x3v5_Qzoo2Rs92Q7gdquPmA37wRK8nzX` | Sep24 | 27.2s · 17.18 | OUR Drive pack |
-| Poster | `assets/mkt-hero-poster.jpg` | (frame from 6.2) | — | — | — | Pins and Needles can / Black Kite mark |
+| Poster | `assets/mkt-blue-taxi-frame0.jpg` | frame0 of Blue Taxi web | — | — | — | first-paint (not blue-can) |
 
 Same mute/autoplay + `prefers-reduced-motion` gate as prior pack. Cycles 1→13→1. Lean encodes kept beside web cuts in `assets/` but not wired.
 
 ## Skipped (candidates listed)
+- `assets/mkt-bk-6-1-oil-beer-draft-2-2.mp4` — dropped t39u/t40u: H1 covered by BK (food↔beer); replaced by Blue Taxi web as the start clip.
 
 | Drive name | Drive id | Size | Why |
 |------------|----------|------|-----|
+| BK 6.1 Oil Beer (Draft 2.2).mp4 | `11y0JI9YaT9fx3m7TCU85dHhm3Cho32yb` | ~9 MB | t39u/t40u — dropped: H1 covered food↔beer / BK mark under hero |
 | BK 7.1 Sonnys (Draft 1.0 / 2.0).mp4 | `1jImJCsNXUlzEmjqIsBy2Gr8KWwm4IDgq` / `1F3dxgDAS4SzmWwLPPM9rTCzLviluhNNE` | ~241 MB each | Jul24 — over cap |
 | BK 7.4 Clone (Draft 1.0).mp4 | `1HdXRwXTbZuaCjxgZTY7MMMDE65e7KjvZ` | ~68 MB | Prefer Draft 2.0 (wired) |
 | BK 1.x Agape / Char Siu / Perspective (Mar24) | various | >180 MB | over cap |

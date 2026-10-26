@@ -16,7 +16,7 @@ Hero `<source>` + JS `clips[]` use non-lean paths. `*-lean.mp4` retained on disk
 
 | # | Local asset |
 |---|-------------|
-| 1 | `assets/mkt-bk-6-1-oil-beer-draft-2-2.mp4` |
+| 1 | `assets/mkt-bk-4-3-blue-taxi-web.mp4` |
 | 2 | `assets/mkt-bk-6-2-reverse-throw-web.mp4` |
 | 3 | `assets/mkt-bk-7-4-clone-d2.mp4` |
 | 4 | `assets/mkt-bk-5-1-jump.mp4` |
@@ -52,5 +52,11 @@ claim_ge_99=false · staging Pages only · WP/DNS/Shak RO · his photos/marketin
 - Removed exact sell `<p class="sell">…</p>`
 - Reverted playlist lean → prior web cuts; lean files unused on disk
 - t26u: `index.html` uses dual `<video class="film-banner">` layers (`#film-portrait` A / `#film-portrait-b` B, `is-front`/`is-back`, bg `#0c0b09`). A starts on clips[0] with poster, poster stripped on first `playing`; B preloads clips[1]; on `ended` the back layer waits for `canplay`, plays, then layers swap — visible layer `.src` is never reassigned and no poster is re-set; reduced-motion pauses both, drops autoplay, no cycle.
-- t29u: first-paint poster = assets/mkt-oil-beer-frame0.jpg; no blue can on cold load.
+- t29u: first-paint poster = assets/mkt-oil-beer-frame0.jpg; no blue can on cold load. (superseded t39u → blue-taxi frame0)
 - t35u: object-position center 28% on film banners (show more in-clip top script).
+
+## t39u/t40u — 2026-10-25
+- Dropped oil-beer start (`assets/mkt-bk-6-1-oil-beer-draft-2-2.mp4`): H1 covered by BK (food↔beer).
+- Added Blue Taxi web (`assets/mkt-bk-4-3-blue-taxi-web.mp4`, Drive `14teBh6FM9p_3ri_igw2w-sSRUlyer8Du`, BK 4.3 Blue Taxi Draft 1.1).
+- New start clip = Blue Taxi; poster = `assets/mkt-blue-taxi-frame0.jpg`.
+- `claim_ge_99=false`.
