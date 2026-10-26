@@ -52,3 +52,4 @@ claim_ge_99=false · staging Pages only · WP/DNS/Shak RO · his photos/marketin
 - Removed exact sell `<p class="sell">…</p>`
 - Reverted playlist lean → prior web cuts; lean files unused on disk
 - t26u: `index.html` uses dual `<video class="film-banner">` layers (`#film-portrait` A / `#film-portrait-b` B, `is-front`/`is-back`, bg `#0c0b09`). A starts on clips[0] with poster, poster stripped on first `playing`; B preloads clips[1]; on `ended` the back layer waits for `canplay`, plays, then layers swap — visible layer `.src` is never reassigned and no poster is re-set; reduced-motion pauses both, drops autoplay, no cycle.
+- t29u: first-paint poster = assets/mkt-oil-beer-frame0.jpg; no blue can on cold load.
