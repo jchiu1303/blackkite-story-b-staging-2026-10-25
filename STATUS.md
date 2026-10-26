@@ -1,45 +1,45 @@
-# STATUS — Black Kite STAGING · design-2 story-b + lean hero playlist (Job A)
+# STATUS — Black Kite STAGING · design-2 story-b (t17u+t18u lean off)
 
-- When: 2026-10-25 ~21:36 Asia/Manila
-- Seat: Implementer · Jev grunt/home_gpu 0.24 overridden (Imp Flash under GO D tip 2ca362f8; staging box file work) · skill_flag=none
-- Jon GO: widget t989s3437 “both” · Chief room ORDER Job A+B
+- When: 2026-10-26 ~23:55 Asia/Hong_Kong
+- Seat: Implementer · Jev seat=grunt conf~0.7 overridden Imp Flash (GO D; Grunt=home GPU only) · skill_flag=none
+- Jon GO: t17u+t18u via Chief — remove sell line; revert hero playlist lean → prior web cuts
 - Pack: /workspace/blackkite-story-b-staging-2026-10-25/
 - Preview: https://jchiu1303.github.io/blackkite-story-b-staging-2026-10-25/
 - Repo: https://github.com/jchiu1303/blackkite-story-b-staging-2026-10-25
 - Drive pack folder: https://drive.google.com/drive/folders/1sJQ-ypmCu64n-fgOJeZ13GRhfmgkimw-
 - VIDEO_PICKS: /workspace/blackkite-story-b-staging-2026-10-25/VIDEO_PICKS.md
-- LEAN_SIZES: /workspace/blackkite-story-b-staging-2026-10-25/LEAN_SIZES.tsv
+- LEAN_SIZES: /workspace/blackkite-story-b-staging-2026-10-25/LEAN_SIZES.tsv (historical; lean unused)
 - Pick untouched: https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/
 
-## Marketing videos on hero playlist (13 lean)
-All `assets/*-lean.mp4`; originals retained. Recipe: `-an` libx264 yuv420p scale≤1080 CRF28 medium +faststart; Oil Beer CRF32 + 2.5M/3M/6M.
+## Marketing videos on hero playlist (13 prior web cuts; lean off)
+Hero `<source>` + JS `clips[]` use non-lean paths. `*-lean.mp4` retained on disk unused.
 
-| # | Clip | before MiB | lean MiB |
-|---|------|------------|----------|
-| 1 | Oil Beer | 8.58 | 0.54 |
-| 2 | Reverse Throw | 1.22 | 0.64 |
-| 3 | Clone | 12.71 | 1.02 |
-| 4 | Jump | 17.14 | 2.18 |
-| 5 | Magic Pizza | 21.29 | 2.07 |
-| 6 | Brew Boys | 20.23 | 3.77 |
-| 7 | Char Siu | 22.47 | 2.25 |
-| 8 | Pandan | 32.14 | 3.91 |
-| 9 | Cloudwater | 25.71 | 4.11 |
-| 10 | Purple Rice | 47.01 | 4.66 |
-| 11 | Ivan | 69.56 | 2.34 |
-| 12 | Goodlooking | 19.32 | 10.23 |
-| 13 | Sauce | 17.18 | 6.87 |
+| # | Local asset |
+|---|-------------|
+| 1 | `assets/mkt-bk-6-1-oil-beer-draft-2-2.mp4` |
+| 2 | `assets/mkt-bk-6-2-reverse-throw-web.mp4` |
+| 3 | `assets/mkt-bk-7-4-clone-d2.mp4` |
+| 4 | `assets/mkt-bk-5-1-jump.mp4` |
+| 5 | `assets/mkt-bk-7-2-magic-pizza.mp4` |
+| 6 | `assets/mkt-bk-4-1-brew-boys.mp4` |
+| 7 | `assets/mkt-bk-4-3-char-siu-d31.mp4` |
+| 8 | `assets/mkt-bk-5-3-pandan.mp4` |
+| 9 | `assets/mkt-bk-5-2-cloudwater-d2.mp4` |
+| 10 | `assets/mkt-bk-4-2-purple-rice-d2.mp4` |
+| 11 | `assets/mkt-bk-7-3-ivan.mp4` |
+| 12 | `assets/mkt-goodlooking-web.mp4` |
+| 13 | `assets/mkt-sauce-web.mp4` |
 
 ## Still skipped
 - Sonnys 7.1 (~241 MB) · March BK 1.x (>180 MB)
 
 ## Locks
-claim_ge_99=false · staging Pages only · WP/DNS/Shak RO · his photos/marketing only · no PASS invent · pick untouched · `.film-banner` object-fit:cover · `#film-portrait` preload=none
+claim_ge_99=false · staging Pages only · WP/DNS/Shak RO · his photos/marketing only · no PASS invent · pick untouched · `.film-banner` object-fit:cover · `#film-portrait` preload=none · sell line removed (no replacement copy)
 
 ## Checksums (md5-8)
-- index.html: dc52b1f9 (was e47db799)
+- index.html: 0c78d700 (was dc52b1f9)
 - Job B captions: HOLD (await Chief shortlist)
 
-## Job A
-- Wired lean paths into playlist + first `<source>`; `preload="none"` on `#film-portrait`
-- Drive lean upload + Pages push: in hop (OUR folder only)
+## t17u+t18u
+- Removed exact sell `<p class="sell">…</p>`
+- Reverted playlist lean → prior web cuts; lean files unused on disk

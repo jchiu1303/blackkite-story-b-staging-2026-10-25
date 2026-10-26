@@ -1,11 +1,11 @@
 {
   "preview_url": "https://jchiu1303.github.io/blackkite-story-b-staging-2026-10-25/",
-  "md5_index_8": "dc52b1f9",
+  "md5_index_8": "0c78d700",
   "drive_folder": "1sJQ-ypmCu64n-fgOJeZ13GRhfmgkimw-",
   "repo": "https://github.com/jchiu1303/blackkite-story-b-staging-2026-10-25",
   "pick_untouched": "https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/",
   "claim_ge_99": false,
-  "order": "JobA-lean",
+  "order": "t17u-revert-lean",
   "playlist_len": 13,
   "t942u_wired": [
     {
@@ -89,9 +89,9 @@
     "link_audit": "critical_refreshed_11_clip",
     "prior_md5": "d31b7514"
   },
-  "last_tip": "JobA-lean",
-  "index_md5_8": "dc52b1f9",
-  "note": "Job A lean playlist wired; preload=none; originals kept; Shak RO",
+  "last_tip": "t17u+t18u",
+  "index_md5_8": "0c78d700",
+  "note": "t17u+t18u: sell line removed; hero playlist prior web cuts; lean off (files unused on disk); Shak RO; claim_ge_99=false",
   "t973u": {
     "goodlooking": {
       "local": "mkt-goodlooking-web.mp4",
@@ -190,6 +190,23 @@
       "mkt-goodlooking-web-lean.mp4": "1qujfkOLdJu9ZUTh-gkfGfH1eSYeqCy-d",
       "mkt-sauce-web-lean.mp4": "1GTrbAR2ySV6HF8VFfRXyzqSeWvzcCz9j"
     },
-    "drive_folder": "1sJQ-ypmCu64n-fgOJeZ13GRhfmgkimw-"
-  }
+    "drive_folder": "1sJQ-ypmCu64n-fgOJeZ13GRhfmgkimw-",
+    "active": false,
+    "note": "unused after t17u+t18u; retained on disk"
+  },
+  "playlist_active": [
+    "mkt-bk-6-1-oil-beer-draft-2-2.mp4",
+    "mkt-bk-6-2-reverse-throw-web.mp4",
+    "mkt-bk-7-4-clone-d2.mp4",
+    "mkt-bk-5-1-jump.mp4",
+    "mkt-bk-7-2-magic-pizza.mp4",
+    "mkt-bk-4-1-brew-boys.mp4",
+    "mkt-bk-4-3-char-siu-d31.mp4",
+    "mkt-bk-5-3-pandan.mp4",
+    "mkt-bk-5-2-cloudwater-d2.mp4",
+    "mkt-bk-4-2-purple-rice-d2.mp4",
+    "mkt-bk-7-3-ivan.mp4",
+    "mkt-goodlooking-web.mp4",
+    "mkt-sauce-web.mp4"
+  ]
 }
