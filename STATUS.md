@@ -37,8 +37,12 @@ Hero `<source>` + JS `clips[]` use non-lean paths. `*-lean.mp4` retained on disk
 claim_ge_99=false · staging Pages only · WP/DNS/Shak RO · his photos/marketing only · no PASS invent · pick untouched · `.film-banner` object-fit:cover · `#film-portrait` preload=none · sell line removed (no replacement copy)
 
 ## Checksums (md5-8)
-- index.html: 0c78d700 (was dc52b1f9)
+- index.html: e79ad6e0 (was dc52b1f9)
 - Job B captions: HOLD (await Chief shortlist)
+
+## t26u
+- Dual-video A/B layer swap (`#film-portrait` / `#film-portrait-b`). Visible layer `.src` never reassigned; poster cleared on first play and never reset. Back preloads next; flip on canplay.
+- index.md5-8: e79ad6e0
 
 ## t22u
 - Inter-clip poster flash fixed: clear poster on first play; hidden preload `<video>`; swap on `ended` only after next `canplay` (last frame / `#0c0b09` until swap)
@@ -47,3 +51,4 @@ claim_ge_99=false · staging Pages only · WP/DNS/Shak RO · his photos/marketin
 ## t17u+t18u
 - Removed exact sell `<p class="sell">…</p>`
 - Reverted playlist lean → prior web cuts; lean files unused on disk
+- t26u: `index.html` uses dual `<video class="film-banner">` layers (`#film-portrait` A / `#film-portrait-b` B, `is-front`/`is-back`, bg `#0c0b09`). A starts on clips[0] with poster, poster stripped on first `playing`; B preloads clips[1]; on `ended` the back layer waits for `canplay`, plays, then layers swap — visible layer `.src` is never reassigned and no poster is re-set; reduced-motion pauses both, drops autoplay, no cycle.

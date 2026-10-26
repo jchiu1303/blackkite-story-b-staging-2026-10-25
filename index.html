@@ -175,6 +175,15 @@
     * { animation: none !important; transition: none !important; }
     .reveal, .js-motion .copy { opacity: 1 !important; transform: none !important; }
   }
+
+    /* t26u dual-video layer swap */
+    .film-video { background: #0c0b09; }
+    #film-portrait, #film-portrait-b {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; background: #0c0b09;
+    }
+    #film-portrait.is-front, #film-portrait-b.is-front { opacity: 1; z-index: 1; }
+    #film-portrait.is-back,  #film-portrait-b.is-back  { opacity: 0; z-index: 0; pointer-events: none; }
 </style>
 </head>
 <body>
@@ -182,11 +191,12 @@
 
 <section class="film" id="top">
   <div class="film-video">
-    <video id="film-portrait" class="film-banner" autoplay muted playsinline preload="none"
+    <video id="film-portrait" class="film-banner is-front" autoplay muted playsinline preload="none"
       poster="assets/mkt-hero-poster.jpg"
       aria-label="Black Kite marketing film — rotating BK portrait clips (Oil Beer, Reverse Throw, Clone, Jump, Magic Pizza, Brew Boys, Char Siu, Pandan, Cloudwater, Purple Rice, Ivan, Goodlooking, Sauce).">
       <source src="assets/mkt-bk-6-1-oil-beer-draft-2-2.mp4" type="video/mp4">
     </video>
+          <video id="film-portrait-b" class="film-banner is-back" muted playsinline preload="none" aria-hidden="true"></video>
     <div class="void">
       <div class="bar">
         <a class="mark" href="#top">
@@ -292,65 +302,8 @@
   <span><a href="https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/">Compare</a> · <a href="https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/story-a/">A</a> · B · <a href="https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/story-c/">C</a></span>
 </footer>
 <script>
-(function () {
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!reduce) document.documentElement.classList.add("js-motion");
-  document.querySelectorAll("video").forEach(function (v) {
-    if (reduce) { v.pause(); v.removeAttribute("autoplay"); }
-  });
-  var nodes = document.querySelectorAll(".chapter");
-  if (!reduce && "IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.28 });
-    nodes.forEach(function (el) { io.observe(el); });
-  } else {
-    nodes.forEach(function (el) { el.classList.add("is-in"); });
-  }
-
-  var strip = document.querySelector(".chip-strip");
-  if (!strip) return;
-  var openChip = null, openPanel = null;
-  function closePanel() {
-    if (openPanel) { openPanel.classList.remove("is-open"); openPanel.setAttribute("hidden", ""); openPanel = null; }
-    if (openChip) { openChip.classList.remove("is-open"); openChip.setAttribute("aria-expanded", "false"); openChip = null; }
-  }
-  function openFor(chip) {
-    var panel = document.getElementById(chip.getAttribute("aria-controls"));
-    if (!panel) return;
-    if (openChip === chip) { closePanel(); return; }
-    closePanel();
-    openChip = chip; openPanel = panel;
-    chip.classList.add("is-open");
-    chip.setAttribute("aria-expanded", "true");
-    panel.removeAttribute("hidden");
-    panel.classList.add("is-open");
-    var chips = strip.querySelector(".chips");
-    var left = chip.offsetLeft;
-    var max = chips.clientWidth - panel.offsetWidth - 8;
-    if (left > max) left = Math.max(0, max);
-    panel.style.left = left + "px";
-  }
-  strip.querySelectorAll(".chip").forEach(function (chip) {
-    chip.addEventListener("click", function () {
-      openFor(chip);
-      var cid = chip.getAttribute("data-chapter");
-      var ch = cid && document.getElementById(cid);
-      if (ch) ch.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
-    });
-  });
-  strip.querySelectorAll(".chip-panel .close").forEach(function (btn) {
-    btn.addEventListener("click", function (e) { e.stopPropagation(); closePanel(); });
-  });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closePanel(); });
-  document.addEventListener("click", function (e) { if (!strip.contains(e.target)) closePanel(); });
-})();
-(function () {
-  var v = document.getElementById("film-portrait");
-  if (!v) return;
-  var clips = [
+/* t26u — dual-video layer swap: the visible layer's .src is never reassigned */
+const clips = [
     "assets/mkt-bk-6-1-oil-beer-draft-2-2.mp4",
     "assets/mkt-bk-6-2-reverse-throw-web.mp4",
     "assets/mkt-bk-7-4-clone-d2.mp4",
@@ -365,73 +318,130 @@
     "assets/mkt-goodlooking-web.mp4",
     "assets/mkt-sauce-web.mp4"
   ];
-  var i = 0;
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduce) { v.pause(); v.removeAttribute("autoplay"); return; }
 
-  var preload = document.createElement("video");
-  preload.muted = true;
-  preload.playsInline = true;
-  preload.preload = "auto";
-  preload.setAttribute("aria-hidden", "true");
-  preload.setAttribute("playsinline", "");
-  preload.style.cssText = "position:absolute;width:0;height:0;opacity:0;pointer-events:none;left:-9999px";
-  (v.parentNode || document.body).appendChild(preload);
+(function () {
+  "use strict";
+  var CLIPS = clips;
 
-  function clearPoster() {
-    v.removeAttribute("poster");
-    try { v.poster = ""; } catch (e) {}
-  }
+  function boot() {
+    var A = document.getElementById("film-portrait");
+    var B = document.getElementById("film-portrait-b");
+    if (!A || !B) return;
+    if (A.getAttribute("data-t26u") === "1") return;
+    A.setAttribute("data-t26u", "1");
 
-  function prepNext() {
-    var n = (i + 1) % clips.length;
-    var url = clips[n];
-    if (preload.getAttribute("data-clip") === url) return;
-    preload.setAttribute("data-clip", url);
-    preload.src = url;
-    preload.load();
-  }
+    var reduced = false;
+    try { reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) {}
 
-  function playSafe() {
-    var p = v.play();
-    if (p && p.catch) p.catch(function () {});
-  }
+    var front = A;
+    var back = B;
+    var index = 0;
 
-  function swapTo(url) {
-    clearPoster();
-    v.src = url;
-    playSafe();
-    prepNext();
-  }
+    A.classList.add("is-front"); A.classList.remove("is-back");
+    B.classList.add("is-back");  B.classList.remove("is-front");
+    A.setAttribute("aria-hidden", "false");
+    B.setAttribute("aria-hidden", "true");
+    A.muted = true; B.muted = true;
+    B.removeAttribute("poster");
 
-  v.addEventListener("playing", clearPoster, { once: true });
-  v.addEventListener("loadeddata", prepNext, { once: true });
-  if (v.readyState >= 2) prepNext();
-
-  v.addEventListener("ended", function () {
-    i = (i + 1) % clips.length;
-    var url = clips[i];
-    function whenReady(fn) {
-      if (preload.getAttribute("data-clip") === url && preload.readyState >= 3) {
-        fn();
-        return;
-      }
-      if (preload.getAttribute("data-clip") !== url) {
-        preload.setAttribute("data-clip", url);
-        preload.src = url;
-        preload.load();
-      }
-      var onReady = function () {
-        preload.removeEventListener("canplay", onReady);
-        fn();
-      };
-      preload.addEventListener("canplay", onReady);
+    if (reduced) {
+      A.removeAttribute("autoplay");
+      B.removeAttribute("autoplay");
+      A.autoplay = false; B.autoplay = false;
+      try { A.pause(); B.pause(); } catch (e) {}
+      return;
     }
-    // Keep last frame visible (poster already cleared) until next canplay.
-    whenReady(function () { swapTo(url); });
-  });
+
+    function stripPoster() {
+      A.removeAttribute("poster");
+      B.removeAttribute("poster");
+    }
+
+    A.addEventListener("playing", function onFirstPlaying() {
+      A.removeEventListener("playing", onFirstPlaying);
+      A.removeAttribute("poster");
+    });
+    if (!A.paused && A.readyState >= 2) A.removeAttribute("poster");
+
+    function flip() {
+      var t = front;
+      front = back;
+      back = t;
+      front.classList.remove("is-back");
+      front.classList.add("is-front");
+      back.classList.remove("is-front");
+      back.classList.add("is-back");
+      front.setAttribute("aria-hidden", "false");
+      back.setAttribute("aria-hidden", "true");
+      try { back.pause(); } catch (e) {}
+    }
+
+    function primeBack(i) {
+      if (!CLIPS.length) return;
+      back.removeAttribute("poster");
+      try { back.pause(); } catch (e) {}
+      back.preload = "auto";
+      back.src = CLIPS[i % CLIPS.length];
+      try { back.load(); } catch (e) {}
+    }
+
+    function advance() {
+      if (reduced) return;
+      var next = (index + 1) % CLIPS.length;
+      var done = false;
+      function go() {
+        if (done || reduced) return;
+        done = true;
+        back.removeEventListener("canplay", go);
+        stripPoster();
+        try { back.currentTime = 0; } catch (e) {}
+        var p = back.play();
+        if (p && p.catch) p.catch(function () {});
+        flip();
+        index = next;
+        primeBack((index + 1) % CLIPS.length);
+      }
+      back.addEventListener("canplay", go);
+      if (back.readyState >= 3) go();
+    }
+
+    function onEnded(e) {
+      if (e.target !== front) return;
+      advance();
+    }
+    A.addEventListener("ended", onEnded);
+    B.addEventListener("ended", onEnded);
+
+    if (!A.getAttribute("src") && CLIPS.length) {
+      A.preload = "auto";
+      A.src = CLIPS[0];
+      try { A.load(); } catch (e) {}
+    }
+
+    if (CLIPS.length > 1) primeBack(1);
+
+    var p = A.play();
+    if (p && p.catch) p.catch(function () {});
+
+    function kick() {
+      if (reduced) return;
+      if (front.paused) {
+        var q = front.play();
+        if (q && q.catch) q.catch(function () {});
+      }
+    }
+    document.addEventListener("pointerdown", kick);
+    document.addEventListener("touchstart", kick);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
 })();
-</script>
+
+  </script>
 <script>
 (function () {
   function goHash(hash) {
