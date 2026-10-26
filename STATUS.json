@@ -223,11 +223,17 @@
       "add": "assets/mkt-bk-4-3-blue-taxi-web.mp4",
       "drive_id": "14teBh6FM9p_3ri_igw2w-sSRUlyer8Du",
       "start": "assets/mkt-bk-4-3-blue-taxi-web.mp4",
-      "poster": "assets/mkt-blue-taxi-frame0.jpg",
+      "poster": "assets/mkt-oil-beer-frame0.jpg",
       "claim_ge_99": false
     }
   ],
   "t39u_dropped": "assets/mkt-bk-6-1-oil-beer-draft-2-2.mp4",
   "t39u_added": "assets/mkt-bk-4-3-blue-taxi-web.mp4",
-  "t39u_drive_id": "14teBh6FM9p_3ri_igw2w-sSRUlyer8Du"
+  "t39u_drive_id": "14teBh6FM9p_3ri_igw2w-sSRUlyer8Du",
+  "t44u": {
+    "oil_beer_first": true,
+    "blue_taxi_second": true,
+    "poster": "assets/mkt-oil-beer-frame0.jpg",
+    "claim_ge_99": false
+  }
 }
