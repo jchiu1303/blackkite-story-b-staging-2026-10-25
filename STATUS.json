@@ -235,5 +235,16 @@
     "blue_taxi_second": true,
     "poster": "assets/mkt-oil-beer-frame0.jpg",
     "claim_ge_99": false
+  },
+  "t51u": {
+    "mailto": "beer@blackkite.hk",
+    "mailto_href": "mailto:beer@blackkite.hk?subject=Bars%20enquiry",
+    "legal_hk_liquor": "Under Hong Kong law, it is not permitted to sell or supply intoxicating liquor to minors in the course of business. Under the law of Hong Kong, intoxicating liquor must not be sold or supplied to a minor in the course of business.",
+    "blue_taxi_dropped_from_playlist": true,
+    "first_clip": "assets/mkt-bk-6-1-oil-beer-draft-2-2.mp4",
+    "second_clip": "assets/mkt-bk-6-2-reverse-throw-web.mp4",
+    "poster": "assets/mkt-oil-beer-frame0.jpg",
+    "clips_count": 13,
+    "index_md5_8": "fc90b467"
   }
 }

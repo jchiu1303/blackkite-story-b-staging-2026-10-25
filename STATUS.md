@@ -11,26 +11,24 @@
 - LEAN_SIZES: /workspace/blackkite-story-b-staging-2026-10-25/LEAN_SIZES.tsv (historical; lean unused)
 - Pick untouched: https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/
 
-## Marketing videos on hero playlist (14 clips; oil-beer first, Blue Taxi second)
+## Marketing videos on hero playlist (13 clips; oil-beer first; Blue Taxi out)
 Hero `<source>` + JS `clips[]` use non-lean paths. `*-lean.mp4` retained on disk unused.
 
 | # | Local asset |
 |---|-------------|
 | 1 | `assets/mkt-bk-6-1-oil-beer-draft-2-2.mp4` |
-| 2 | `assets/mkt-bk-4-3-blue-taxi-web.mp4` |
-| 3 | `assets/mkt-bk-6-2-reverse-throw-web.mp4` |
-| 4 | `assets/mkt-bk-7-4-clone-d2.mp4` |
-| 5 | `assets/mkt-bk-5-1-jump.mp4` |
-| 6 | `assets/mkt-bk-7-2-magic-pizza.mp4` |
-| 7 | `assets/mkt-bk-4-1-brew-boys.mp4` |
-| 8 | `assets/mkt-bk-4-3-char-siu-d31.mp4` |
-| 9 | `assets/mkt-bk-5-3-pandan.mp4` |
-| 10 | `assets/mkt-bk-5-2-cloudwater-d2.mp4` |
-| 11 | `assets/mkt-bk-4-2-purple-rice-d2.mp4` |
-| 12 | `assets/mkt-bk-7-3-ivan.mp4` |
-| 13 | `assets/mkt-goodlooking-web.mp4` |
-| 14 | `assets/mkt-sauce-web.mp4` |
-
+| 2 | `assets/mkt-bk-6-2-reverse-throw-web.mp4` |
+| 3 | `assets/mkt-bk-7-4-clone-d2.mp4` |
+| 4 | `assets/mkt-bk-5-1-jump.mp4` |
+| 5 | `assets/mkt-bk-7-2-magic-pizza.mp4` |
+| 6 | `assets/mkt-bk-4-1-brew-boys.mp4` |
+| 7 | `assets/mkt-bk-4-3-char-siu-d31.mp4` |
+| 8 | `assets/mkt-bk-5-3-pandan.mp4` |
+| 9 | `assets/mkt-bk-5-2-cloudwater-d2.mp4` |
+| 10 | `assets/mkt-bk-4-2-purple-rice-d2.mp4` |
+| 11 | `assets/mkt-bk-7-3-ivan.mp4` |
+| 12 | `assets/mkt-goodlooking-web.mp4` |
+| 13 | `assets/mkt-sauce-web.mp4` |
 ## Still skipped
 - Sonnys 7.1 (~241 MB) · March BK 1.x (>180 MB)
 
@@ -38,7 +36,7 @@ Hero `<source>` + JS `clips[]` use non-lean paths. `*-lean.mp4` retained on disk
 claim_ge_99=false · staging Pages only · WP/DNS/Shak RO · his photos/marketing only · no PASS invent · pick untouched · `.film-banner` object-fit:cover · `#film-portrait` preload=none · sell line removed (no replacement copy)
 
 ## Checksums (md5-8)
-- index.html: 2a676099
+- index.html: fc90b467
 - Job B captions: HOLD (await Chief shortlist)
 
 ## t26u
@@ -69,4 +67,12 @@ claim_ge_99=false · staging Pages only · WP/DNS/Shak RO · his photos/marketin
 - poster = `assets/mkt-oil-beer-frame0.jpg` (not blue-can; not blue-taxi)
 - dual-video + object-position center 28% + preload=auto on A intact
 - index.md5-8: 2a676099
+- claim_ge_99=false
+
+## t51u — 2026-10-27
+- mailto CTA: `mailto:beer@blackkite.hk?subject=Bars%20enquiry` on “For bars · write us”
+- Exact HK liquor minors paragraph in `.foot` (same wording as blackkite.hk)
+- Dropped Blue Taxi from `clips[]` (asset retained); oil-beer still start + `mkt-oil-beer-frame0.jpg`
+- clips[0]=assets/mkt-bk-6-1-oil-beer-draft-2-2.mp4; clips[1]=assets/mkt-bk-6-2-reverse-throw-web.mp4 (13 clips)
+- index.md5-8: fc90b467
 - claim_ge_99=false

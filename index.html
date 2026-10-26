@@ -152,6 +152,7 @@
     font-family: Outfit, sans-serif; font-size: 12px; color: var(--mute);
   }
   .foot a { border-bottom: 1px solid currentColor; }
+  .foot .legal { margin: 0.6rem 0 0; max-width: 62ch; font-size: 0.72rem; line-height: 1.35; opacity: 0.85; }
 
   @media (max-width: 800px) {
     .film { grid-template-columns: 1fr; height: calc(100svh - var(--ban)); min-height: 620px; }
@@ -194,7 +195,7 @@
   <div class="film-video">
     <video id="film-portrait" class="film-banner is-front" autoplay muted playsinline preload="auto"
       poster="assets/mkt-oil-beer-frame0.jpg"
-      aria-label="Black Kite marketing film — rotating BK portrait clips (Oil Beer, Blue Taxi, Reverse Throw, Clone, Jump, Magic Pizza, Brew Boys, Char Siu, Pandan, Cloudwater, Purple Rice, Ivan, Goodlooking, Sauce).">
+      aria-label="Black Kite marketing film — rotating BK portrait clips (Oil Beer, Reverse Throw, Clone, Jump, Magic Pizza, Brew Boys, Char Siu, Pandan, Cloudwater, Purple Rice, Ivan, Goodlooking, Sauce).">
       <source src="assets/mkt-bk-6-1-oil-beer-draft-2-2.mp4" type="video/mp4">
     </video>
           <video id="film-portrait-b" class="film-banner is-back" muted playsinline preload="none" aria-hidden="true"></video>
@@ -295,18 +296,19 @@
 
 <div class="bridge" id="bridge">
   <p>Three stills of one city’s flavour. The rest of the beer leaves quietly.</p>
-  <span class="write">For bars · write us</span>
+  <a class="write" href="mailto:beer@blackkite.hk?subject=Bars%20enquiry">For bars · write us</a>
 </div>
 
 <footer class="foot">
   <span>18+ · <span lang="zh-Hant">不得向未成年人售賣酒類</span></span>
+  <p class="legal">Under Hong Kong law, it is not permitted to sell or supply intoxicating liquor to minors in the course of business. Under the law of Hong Kong, intoxicating liquor must not be sold or supplied to a minor in the course of business.</p>
   <span><a href="https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/">Compare</a> · <a href="https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/story-a/">A</a> · B · <a href="https://jchiu1303.github.io/blackkite-shak-pick-2026-10-19/story-c/">C</a></span>
 </footer>
 <script>
 /* t26u — dual-video layer swap: the visible layer's .src is never reassigned */
 const clips = [
     "assets/mkt-bk-6-1-oil-beer-draft-2-2.mp4",
-    "assets/mkt-bk-4-3-blue-taxi-web.mp4",
+
     "assets/mkt-bk-6-2-reverse-throw-web.mp4",
     "assets/mkt-bk-7-4-clone-d2.mp4",
     "assets/mkt-bk-5-1-jump.mp4",
