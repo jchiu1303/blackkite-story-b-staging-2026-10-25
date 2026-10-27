@@ -246,5 +246,25 @@
     "poster": "assets/mkt-oil-beer-frame0.jpg",
     "clips_count": 13,
     "index_md5_8": "fc90b467"
+  },
+  "t83u": {
+    "beer_order": [
+      "Iron Goddess",
+      "Flower Market",
+      "Heron",
+      "Flaming Tananger",
+      "Skybound",
+      "Czechmate",
+      "Badass"
+    ],
+    "promo": "Iron Goddess",
+    "index_md5_8": "b6300928",
+    "assets_added": [
+      "iron-goddess.png",
+      "flower-market.png",
+      "heron.png",
+      "flaming-tanager.png"
+    ],
+    "iron_goddess_note": "Firefly-3.png 600x600 (shop primary; no larger product shot on WP)"
   }
 }

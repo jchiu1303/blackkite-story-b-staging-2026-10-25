@@ -36,7 +36,7 @@ Hero `<source>` + JS `clips[]` use non-lean paths. `*-lean.mp4` retained on disk
 claim_ge_99=false · staging Pages only · WP/DNS/Shak RO · his photos/marketing only · no PASS invent · pick untouched · `.film-banner` object-fit:cover · `#film-portrait` preload=none · sell line removed (no replacement copy)
 
 ## Checksums (md5-8)
-- index.html: fc90b467
+- index.html: b6300928
 - Job B captions: HOLD (await Chief shortlist)
 
 ## t26u
@@ -75,4 +75,13 @@ claim_ge_99=false · staging Pages only · WP/DNS/Shak RO · his photos/marketin
 - Dropped Blue Taxi from `clips[]` (asset retained); oil-beer still start + `mkt-oil-beer-frame0.jpg`
 - clips[0]=assets/mkt-bk-6-1-oil-beer-draft-2-2.mp4; clips[1]=assets/mkt-bk-6-2-reverse-throw-web.mp4 (13 clips)
 - index.md5-8: fc90b467
+- claim_ge_99=false
+
+## t83u — 2026-10-27
+- Newest-first from live Woo shop (orderby=date desc, pulled 2026-10-27)
+- Promo = Iron Goddess (Firefly-3.png) + Newly released.
+- Chips/chapters 01–07: Iron Goddess → Flower Market → Heron → Flaming Tananger → Skybound → Czechmate → Badass
+- Assets: iron-goddess.png, flower-market.png, heron.png, flaming-tanager.png (from blackkite.hk WP uploads); older cans kept
+- Film/mailto/legal unchanged
+- index.md5-8: b6300928
 - claim_ge_99=false
