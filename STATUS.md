@@ -36,7 +36,7 @@ Hero `<source>` + JS `clips[]` use non-lean paths. `*-lean.mp4` retained on disk
 claim_ge_99=false · staging Pages only · WP/DNS/Shak RO · his photos/marketing only · no PASS invent · pick untouched · `.film-banner` object-fit:cover · `#film-portrait` preload=none · sell line removed (no replacement copy)
 
 ## Checksums (md5-8)
-- index.html: b6300928
+- index.html: 34915214
 - Job B captions: HOLD (await Chief shortlist)
 
 ## t26u
@@ -84,4 +84,12 @@ claim_ge_99=false · staging Pages only · WP/DNS/Shak RO · his photos/marketin
 - Assets: iron-goddess.png, flower-market.png, heron.png, flaming-tanager.png (from blackkite.hk WP uploads); older cans kept
 - Film/mailto/legal unchanged
 - index.md5-8: b6300928
+- claim_ge_99=false
+
+## t88u — 2026-10-27
+- Cap at three beers: Iron Goddess → Flower Market → Heron
+- Removed chips/chapters: Flaming Tananger, Skybound, Czechmate, Badass (assets retained)
+- month-label: The month · three frames
+- Film/mailto/legal/promo Iron Goddess unchanged
+- index.md5-8: 34915214
 - claim_ge_99=false

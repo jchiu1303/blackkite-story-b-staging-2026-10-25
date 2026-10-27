@@ -266,5 +266,19 @@
       "flaming-tanager.png"
     ],
     "iron_goddess_note": "Firefly-3.png 600x600 (shop primary; no larger product shot on WP)"
+  },
+  "t88u": {
+    "beer_trio": [
+      "Iron Goddess",
+      "Flower Market",
+      "Heron"
+    ],
+    "removed": [
+      "Flaming Tananger",
+      "Skybound",
+      "Czechmate",
+      "Badass"
+    ],
+    "index_md5_8": "34915214"
   }
 }
