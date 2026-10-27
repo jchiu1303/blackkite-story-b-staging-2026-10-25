@@ -60,6 +60,29 @@
     width: auto; max-width: 100%; max-height: 68vh;
     object-fit: contain; object-position: center top;
   }
+
+  /* t90u — Iron Goddess 600×600 square-friendly vs tall product shots */
+  .canwrap.promo img[src*="iron-goddess"],
+  #chapter-iron .shot img,
+  #chip-iron img {
+    width: min(100%, 52vh);
+    max-width: 520px;
+    max-height: 68vh;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+  }
+  #chip-iron img {
+    width: 88px;
+    max-width: 88px;
+    max-height: 88px;
+    height: 88px;
+  }
+  @media (max-width: 800px) {
+    .canwrap.promo img[src*="iron-goddess"] { max-height: 42vh; width: min(100%, 42vh); }
+  }
+
   .promo-name {
     margin: 0; font-family: "Barlow Condensed", Impact, sans-serif;
     font-weight: 500; font-size: clamp(28px, 3vw, 40px); line-height: 1; color: var(--cream);
@@ -214,7 +237,7 @@
       <div>
         <div class="speak">
         <h1>Hong Kong’s flavour.</h1>
-        <p class="earnest">Hong Kong’s flavour, held as quiet stills: street heat, an engraved dusk, a cinema-board band.</p>
+        <p class="earnest">Iron Goddess, Flower Market, and Heron.</p>
         </div>
       </div>
     </div>
@@ -226,9 +249,8 @@
   </div>
 </section>
 
-<p class="month-label" id="month">The month · three frames</p>
+<p class="month-label" id="month">This month</p>
 <section class="chip-strip" aria-label="Beers this month">
-  <p class="label">Chip → chapter · one can per frame</p>
   <div class="chips">
     <button type="button" class="chip" aria-expanded="false" aria-controls="chip-iron" id="btn-iron" data-chapter="chapter-iron">Iron Goddess</button>
     <button type="button" class="chip" aria-expanded="false" aria-controls="chip-flower" id="btn-flower" data-chapter="chapter-flower">Flower Market</button>
@@ -239,7 +261,7 @@
       <div>
         <p class="name">Iron Goddess</p>
         <p class="meta">Sour</p>
-        <p class="blurb">Collab sour. Strawberries and oolong, held still.</p>
+        <p class="blurb">Holy Goat collab. Strawberries and oolong tea in a sour.</p>
         <button type="button" class="close">Close</button>
       </div>
     </div>
@@ -248,7 +270,7 @@
       <div>
         <p class="name">Flower Market</p>
         <p class="meta">Tomato gose</p>
-        <p class="blurb">Market colour on aluminium. A tomato gose, quiet in the frame.</p>
+        <p class="blurb">Tomato gose. Flower Market on the can.</p>
         <button type="button" class="close">Close</button>
       </div>
     </div>
@@ -257,7 +279,7 @@
       <div>
         <p class="name">Heron</p>
         <p class="meta">Hallertau IPA</p>
-        <p class="blurb">One hop. Hallertau on a quiet heron.</p>
+        <p class="blurb">Single-hop Hallertau IPA.</p>
         <button type="button" class="close">Close</button>
       </div>
     </div>
@@ -279,7 +301,7 @@
       <span class="idx">02</span>
       <h2>Market still</h2>
       <span class="slate">Flower Market · Tomato gose</span>
-      <p>Tomato gose. The market’s colour, held on aluminium.</p>
+      <p>Tomato gose. Flower Market on the can.</p>
     </div>
     <div class="shot"><img src="assets/flower-market.png" alt="Flower Market tomato gose, full can." width="1792" height="2400"></div>
   </section>
@@ -288,14 +310,14 @@
       <span class="idx">03</span>
       <h2>One hop</h2>
       <span class="slate">Heron · Hallertau IPA</span>
-      <p>Hallertau alone. A heron on the label, quiet in the frame.</p>
+      <p>Single-hop Hallertau IPA.</p>
     </div>
     <div class="shot"><img src="assets/heron.png" alt="Heron Hallertau, full can." width="1696" height="2528"></div>
   </section>
 </div>
 
 <div class="bridge" id="bridge">
-  <p>Three stills of one city’s flavour. The rest of the beer leaves quietly.</p>
+  <p>Bars — write us for this month’s three.</p>
   <a class="write" href="mailto:beer@blackkite.hk?subject=Bars%20enquiry">For bars · write us</a>
 </div>
 
@@ -470,36 +492,63 @@ const clips = [
 })();
 </script>
 
+
 <script>
+/* t90u — restore fb5366d chip open + scroll (+ motion), beside dual-video */
 (function () {
-  function closeAll() {
-    document.querySelectorAll(".chip.is-open").forEach(function (b) {
-      b.classList.remove("is-open");
-      b.setAttribute("aria-expanded", "false");
-    });
-    document.querySelectorAll(".chip-panel.is-open").forEach(function (p) {
-      p.classList.remove("is-open");
-      p.hidden = true;
-    });
-  }
-  document.addEventListener("click", function (e) {
-    var close = e.target.closest && e.target.closest(".chip-panel .close");
-    if (close) { closeAll(); return; }
-    var btn = e.target.closest && e.target.closest(".chip");
-    if (!btn) return;
-    var panelId = btn.getAttribute("aria-controls");
-    var panel = panelId && document.getElementById(panelId);
-    var wasOpen = btn.classList.contains("is-open");
-    closeAll();
-    if (wasOpen || !panel) return;
-    btn.classList.add("is-open");
-    btn.setAttribute("aria-expanded", "true");
-    panel.hidden = false;
-    panel.classList.add("is-open");
-    var ch = btn.getAttribute("data-chapter");
-    var el = ch && document.getElementById(ch);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduce) document.documentElement.classList.add("js-motion");
+  document.querySelectorAll("video").forEach(function (v) {
+    if (reduce) { v.pause(); v.removeAttribute("autoplay"); }
   });
+  var nodes = document.querySelectorAll(".chapter");
+  if (!reduce && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.28 });
+    nodes.forEach(function (el) { io.observe(el); });
+  } else {
+    nodes.forEach(function (el) { el.classList.add("is-in"); });
+  }
+
+  var strip = document.querySelector(".chip-strip");
+  if (!strip) return;
+  var openChip = null, openPanel = null;
+  function closePanel() {
+    if (openPanel) { openPanel.classList.remove("is-open"); openPanel.setAttribute("hidden", ""); openPanel = null; }
+    if (openChip) { openChip.classList.remove("is-open"); openChip.setAttribute("aria-expanded", "false"); openChip = null; }
+  }
+  function openFor(chip) {
+    var panel = document.getElementById(chip.getAttribute("aria-controls"));
+    if (!panel) return;
+    if (openChip === chip) { closePanel(); return; }
+    closePanel();
+    openChip = chip; openPanel = panel;
+    chip.classList.add("is-open");
+    chip.setAttribute("aria-expanded", "true");
+    panel.removeAttribute("hidden");
+    panel.classList.add("is-open");
+    var chips = strip.querySelector(".chips");
+    var left = chip.offsetLeft;
+    var max = chips.clientWidth - panel.offsetWidth - 8;
+    if (left > max) left = Math.max(0, max);
+    panel.style.left = left + "px";
+  }
+  strip.querySelectorAll(".chip").forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      openFor(chip);
+      var cid = chip.getAttribute("data-chapter");
+      var ch = cid && document.getElementById(cid);
+      if (ch) ch.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    });
+  });
+  strip.querySelectorAll(".chip-panel .close").forEach(function (btn) {
+    btn.addEventListener("click", function (e) { e.stopPropagation(); closePanel(); });
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closePanel(); });
+  document.addEventListener("click", function (e) { if (!strip.contains(e.target)) closePanel(); });
 })();
 </script>
 

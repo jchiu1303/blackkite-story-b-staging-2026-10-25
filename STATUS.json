@@ -280,5 +280,10 @@
       "Badass"
     ],
     "index_md5_8": "34915214"
+  },
+  "t90u": {
+    "index_md5_8": "e3c73b36",
+    "fixes": 6,
+    "chip_js": "fb5366d IIFE"
   }
 }
