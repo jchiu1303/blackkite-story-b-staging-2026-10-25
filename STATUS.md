@@ -98,3 +98,5 @@ claim_ge_99=false · staging Pages only · WP/DNS/Shak RO · his photos/marketin
 - Six UX fixes: This month; earnest names three cans; plain bars bridge; shop-voice chip blurbs; Iron square CSS; fb5366d chip IIFE restored beside dual-video
 - index.md5-8: e3c73b36
 - claim_ge_99=false
+
+- **t136s478** (2026-10-28): film playlist brewery-first — Brew Boys start + brew-boys frame0 poster; dual-video preload-next kept; Iron tighten t136u already on main; cans untouched; claim_ge_99=false.
