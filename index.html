@@ -63,8 +63,7 @@
 
   /* t90u — Iron Goddess 600×600 square-friendly vs tall product shots */
   .canwrap.promo img[src*="iron-goddess"],
-  #chapter-iron .shot img,
-  #chip-iron img {
+  #chapter-iron .shot img {
     width: min(100%, 52vh);
     max-width: 520px;
     max-height: 68vh;
@@ -72,12 +71,6 @@
     height: auto;
     object-fit: contain;
     object-position: center center;
-  }
-  #chip-iron img {
-    width: 88px;
-    max-width: 88px;
-    max-height: 88px;
-    height: 88px;
   }
   @media (max-width: 800px) {
     .canwrap.promo img[src*="iron-goddess"] { max-height: min(48vh, 340px); width: min(100%, 48vh, 340px); }
@@ -119,23 +112,7 @@
     min-height: 44px; padding: 12px 16px; border: 1px solid rgba(247,241,234,.35); background: transparent; color: var(--cream);
     transition: background 250ms ease, opacity 250ms ease;
   }
-  .chip:hover, .chip:focus-visible, .chip.is-open { background: rgba(247,241,234,.1); }
-  .chip-panel {
-    display: none; position: absolute; z-index: 5; top: calc(100% + 12px); left: 12px;
-    width: min(440px, calc(100vw - 24px));
-    padding: 1rem; background: #1a1714; border: 1px solid rgba(247,241,234,.22);
-    grid-template-columns: 88px 1fr; gap: 14px; align-items: center;
-    opacity: 0; transition: opacity 250ms ease;
-  }
-  .chip-panel.is-open { display: grid; opacity: 1; }
-  .chip-panel img { width: 88px; height: 112px; object-fit: contain; object-position: center top; background: #0c0b09; }
-  .chip-panel .name { margin: 0 0 4px; font-size: 1.625rem; font-weight: 500; line-height: 1; }
-  .chip-panel .meta { margin: 0 0 8px; font-family: Outfit, sans-serif; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--mute); }
-  .chip-panel .blurb { margin: 0; font-size: 1rem; line-height: 1.35; color: var(--cream); }
-  .chip-panel .close {
-    position: absolute; top: 8px; right: 10px; min-height: 44px; min-width: 44px;
-    font-family: Outfit, sans-serif; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--mute);
-  }
+  .chip:hover, .chip:focus-visible { background: rgba(247,241,234,.1); }
 
   .chapter {
     min-height: 92vh; display: grid; grid-template-columns: 1fr 1fr; gap: 4vw; align-items: end;
@@ -287,37 +264,9 @@
 <p class="month-label" id="month">This month</p>
 <section class="chip-strip" aria-label="Beers this month">
   <div class="chips">
-    <button type="button" class="chip" aria-expanded="false" aria-controls="chip-iron" id="btn-iron" data-chapter="chapter-iron">Iron Goddess</button>
-    <button type="button" class="chip" aria-expanded="false" aria-controls="chip-flower" id="btn-flower" data-chapter="chapter-flower">Flower Market</button>
-    <button type="button" class="chip" aria-expanded="false" aria-controls="chip-heron" id="btn-heron" data-chapter="chapter-heron">Heron</button>
-
-    <div class="chip-panel" id="chip-iron" role="region" aria-labelledby="btn-iron" hidden>
-      <img src="assets/iron-goddess.png" alt="" width="600" height="600">
-      <div>
-        <p class="name">Iron Goddess</p>
-        <p class="meta">Sour</p>
-        <p class="blurb">Holy Goat collab. Strawberries and oolong tea in a sour bottle.</p>
-        <button type="button" class="close">Close</button>
-      </div>
-    </div>
-    <div class="chip-panel" id="chip-flower" role="region" aria-labelledby="btn-flower" hidden>
-      <img src="assets/flower-market.png" alt="" width="1792" height="2400">
-      <div>
-        <p class="name">Flower Market</p>
-        <p class="meta">Tomato gose</p>
-        <p class="blurb">Tomato gose. Flower Market on the can.</p>
-        <button type="button" class="close">Close</button>
-      </div>
-    </div>
-    <div class="chip-panel" id="chip-heron" role="region" aria-labelledby="btn-heron" hidden>
-      <img src="assets/heron.png" alt="" width="1696" height="2528">
-      <div>
-        <p class="name">Heron</p>
-        <p class="meta">Hallertau IPA</p>
-        <p class="blurb">Single-hop Hallertau IPA.</p>
-        <button type="button" class="close">Close</button>
-      </div>
-    </div>
+    <button type="button" class="chip" data-chapter="chapter-iron">Iron Goddess</button>
+    <button type="button" class="chip" data-chapter="chapter-flower">Flower Market</button>
+    <button type="button" class="chip" data-chapter="chapter-heron">Heron</button>
   </div>
 </section>
 
@@ -528,7 +477,7 @@ const clips = [
 
 
 <script>
-/* t90u — restore fb5366d chip open + scroll (+ motion), beside dual-video */
+/* t75u — chip click scrolls only; panels removed (+ motion) */
 (function () {
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (!reduce) document.documentElement.classList.add("js-motion");
@@ -549,40 +498,13 @@ const clips = [
 
   var strip = document.querySelector(".chip-strip");
   if (!strip) return;
-  var openChip = null, openPanel = null;
-  function closePanel() {
-    if (openPanel) { openPanel.classList.remove("is-open"); openPanel.setAttribute("hidden", ""); openPanel = null; }
-    if (openChip) { openChip.classList.remove("is-open"); openChip.setAttribute("aria-expanded", "false"); openChip = null; }
-  }
-  function openFor(chip) {
-    var panel = document.getElementById(chip.getAttribute("aria-controls"));
-    if (!panel) return;
-    if (openChip === chip) { closePanel(); return; }
-    closePanel();
-    openChip = chip; openPanel = panel;
-    chip.classList.add("is-open");
-    chip.setAttribute("aria-expanded", "true");
-    panel.removeAttribute("hidden");
-    panel.classList.add("is-open");
-    var chips = strip.querySelector(".chips");
-    var left = chip.offsetLeft;
-    var max = chips.clientWidth - panel.offsetWidth - 8;
-    if (left > max) left = Math.max(0, max);
-    panel.style.left = left + "px";
-  }
   strip.querySelectorAll(".chip").forEach(function (chip) {
     chip.addEventListener("click", function () {
-      openFor(chip);
       var cid = chip.getAttribute("data-chapter");
       var ch = cid && document.getElementById(cid);
       if (ch) ch.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
     });
   });
-  strip.querySelectorAll(".chip-panel .close").forEach(function (btn) {
-    btn.addEventListener("click", function (e) { e.stopPropagation(); closePanel(); });
-  });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closePanel(); });
-  document.addEventListener("click", function (e) { if (!strip.contains(e.target)) closePanel(); });
 })();
 </script>
 
