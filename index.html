@@ -114,8 +114,14 @@
     text-decoration: none; display: inline-flex; align-items: center; cursor: pointer;
   }
   a.chip:hover, a.chip:focus-visible { background: rgba(247,241,234,.1); color: var(--cream); }
-  .shot a { display: contents; }
-  .canwrap.promo > a { display: contents; }
+  .shot a {
+    display: flex; justify-content: center; align-items: flex-end;
+    max-width: 100%; text-decoration: none; color: inherit;
+  }
+  .canwrap.promo > a {
+    display: flex; justify-content: center; align-items: flex-end;
+    max-width: 100%; text-decoration: none; color: inherit;
+  }
 
   .chapter {
     min-height: 92vh; display: grid; grid-template-columns: 1fr 1fr; gap: 4vw; align-items: end;
