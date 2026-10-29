@@ -111,8 +111,11 @@
     font-family: Outfit, sans-serif; font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
     min-height: 44px; padding: 12px 16px; border: 1px solid rgba(247,241,234,.35); background: transparent; color: var(--cream);
     transition: background 250ms ease, opacity 250ms ease;
+    text-decoration: none; display: inline-flex; align-items: center; cursor: pointer;
   }
-  .chip:hover, .chip:focus-visible { background: rgba(247,241,234,.1); }
+  a.chip:hover, a.chip:focus-visible { background: rgba(247,241,234,.1); color: var(--cream); }
+  .shot a { display: contents; }
+  .canwrap.promo > a { display: contents; }
 
   .chapter {
     min-height: 92vh; display: grid; grid-template-columns: 1fr 1fr; gap: 4vw; align-items: end;
@@ -254,7 +257,9 @@
   
   </div>
   <div class="canwrap promo">
+    <a href="https://blackkite.hk/product/holy-goat-x-black-kite-iron-goddess-sour-with-strawberries-and-oolong-tea/">
     <img src="assets/iron-goddess.png" alt="Iron Goddess bottle." width="600" height="600">
+    </a>
     <p class="promo-name">Iron Goddess</p>
     <p class="promo-sell">Newly released.</p>
   </div>
@@ -264,9 +269,9 @@
 <p class="month-label" id="month">This month</p>
 <section class="chip-strip" aria-label="Beers this month">
   <div class="chips">
-    <button type="button" class="chip" data-chapter="chapter-iron">Iron Goddess</button>
-    <button type="button" class="chip" data-chapter="chapter-flower">Flower Market</button>
-    <button type="button" class="chip" data-chapter="chapter-heron">Heron</button>
+    <a class="chip" href="https://blackkite.hk/product/holy-goat-x-black-kite-iron-goddess-sour-with-strawberries-and-oolong-tea/">Iron Goddess</a>
+    <a class="chip" href="https://blackkite.hk/product/flower-market-tomato-gose/">Flower Market</a>
+    <a class="chip" href="https://blackkite.hk/product/heron-hallertau/">Heron</a>
   </div>
 </section>
 
@@ -278,7 +283,7 @@
       <span class="slate">Iron Goddess · Sour</span>
       <p>A Holy Goat collab. Strawberries and oolong tea in a sour bottle.</p>
     </div>
-    <div class="shot"><img src="assets/iron-goddess.png" alt="Iron Goddess sour, full bottle." width="600" height="600"></div>
+    <div class="shot"><a href="https://blackkite.hk/product/holy-goat-x-black-kite-iron-goddess-sour-with-strawberries-and-oolong-tea/"><img src="assets/iron-goddess.png" alt="Iron Goddess sour, full bottle." width="600" height="600"></a></div>
   </section>
   <section class="chapter" id="chapter-flower">
     <div class="copy">
@@ -287,7 +292,7 @@
       <span class="slate">Flower Market · Tomato gose</span>
       <p>Tomato gose. Flower Market on the can.</p>
     </div>
-    <div class="shot"><img src="assets/flower-market.png" alt="Flower Market tomato gose, full can." width="1792" height="2400"></div>
+    <div class="shot"><a href="https://blackkite.hk/product/flower-market-tomato-gose/"><img src="assets/flower-market.png" alt="Flower Market tomato gose, full can." width="1792" height="2400"></a></div>
   </section>
   <section class="chapter" id="chapter-heron">
     <div class="copy">
@@ -296,7 +301,7 @@
       <span class="slate">Heron · Hallertau IPA</span>
       <p>Single-hop Hallertau IPA.</p>
     </div>
-    <div class="shot"><img src="assets/heron.png" alt="Heron Hallertau, full can." width="1696" height="2528"></div>
+    <div class="shot"><a href="https://blackkite.hk/product/heron-hallertau/"><img src="assets/heron.png" alt="Heron Hallertau, full can." width="1696" height="2528"></a></div>
   </section>
 </div>
 
@@ -477,7 +482,7 @@ const clips = [
 
 
 <script>
-/* t75u — chip click scrolls only; panels removed (+ motion) */
+/* t78u — motion only; chips/bottles are shop <a> links */
 (function () {
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (!reduce) document.documentElement.classList.add("js-motion");
@@ -495,16 +500,6 @@ const clips = [
   } else {
     nodes.forEach(function (el) { el.classList.add("is-in"); });
   }
-
-  var strip = document.querySelector(".chip-strip");
-  if (!strip) return;
-  strip.querySelectorAll(".chip").forEach(function (chip) {
-    chip.addEventListener("click", function () {
-      var cid = chip.getAttribute("data-chapter");
-      var ch = cid && document.getElementById(cid);
-      if (ch) ch.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
-    });
-  });
 })();
 </script>
 
