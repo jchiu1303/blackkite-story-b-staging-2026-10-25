@@ -235,7 +235,11 @@
   color: #f5f0e8;
   background: #1a1612;
   border-top: 1px solid rgba(245, 240, 232, 0.12);
-  position: static;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
 }
 @media (max-width: 800px) {
   .deal-bar {
@@ -270,8 +274,8 @@
         </div>
       </div>
     </div>
-  </div>
   <p class="deal-bar" role="status">Buy one, get one free</p>
+  </div>
   <div class="canwrap promo">
     <img src="assets/iron-goddess.png" alt="Iron Goddess bottle." width="600" height="600">
     <p class="promo-name">Iron Goddess</p>
