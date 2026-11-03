@@ -61,19 +61,23 @@
     object-fit: contain; object-position: center top;
   }
 
-  /* t90u — Iron Goddess 600×600 square-friendly vs tall product shots */
+  /* t936u closer — tall rembg cutout; drop t90u 1:1 lock so Collab sour / promo size like cans */
   .canwrap.promo img[src*="iron-goddess"],
   #chapter-iron .shot img {
-    width: min(100%, 52vh);
-    max-width: 520px;
-    max-height: 68vh;
-    aspect-ratio: 1 / 1;
+    width: auto;
+    max-width: min(100%, 380px);
+    max-height: 78vh;
     height: auto;
+    aspect-ratio: auto;
     object-fit: contain;
-    object-position: center center;
+    object-position: center bottom;
   }
   @media (max-width: 800px) {
-    .canwrap.promo img[src*="iron-goddess"] { max-height: min(48vh, 340px); width: min(100%, 48vh, 340px); }
+    .canwrap.promo img[src*="iron-goddess"] {
+      max-height: min(54vh, 460px);
+      max-width: min(100%, 260px);
+      width: auto;
+    }
   }
 
   .promo-name {
@@ -264,7 +268,7 @@
   </div>
   <div class="canwrap promo">
     <a href="https://blackkite.hk/product/holy-goat-x-black-kite-iron-goddess-sour-with-strawberries-and-oolong-tea/">
-    <img src="assets/iron-goddess.png" alt="Iron Goddess bottle." width="600" height="600">
+    <img src="assets/iron-goddess.png" alt="Iron Goddess bottle." width="722" height="2454">
     </a>
     <p class="promo-name">Iron Goddess</p>
     <p class="promo-sell">Newly released.</p>
@@ -289,7 +293,7 @@
       <span class="slate">Iron Goddess · Sour</span>
       <p>A Holy Goat collab. Strawberries and oolong tea in a sour bottle.</p>
     </div>
-    <div class="shot"><a href="https://blackkite.hk/product/holy-goat-x-black-kite-iron-goddess-sour-with-strawberries-and-oolong-tea/"><img src="assets/iron-goddess.png" alt="Iron Goddess sour, full bottle." width="600" height="600"></a></div>
+    <div class="shot"><a href="https://blackkite.hk/product/holy-goat-x-black-kite-iron-goddess-sour-with-strawberries-and-oolong-tea/"><img src="assets/iron-goddess.png" alt="Iron Goddess sour, full bottle." width="722" height="2454"></a></div>
   </section>
   <section class="chapter" id="chapter-flower">
     <div class="copy">
