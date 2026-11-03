@@ -61,23 +61,34 @@
     object-fit: contain; object-position: center top;
   }
 
-  /* t936u closer — tall rembg cutout; drop t90u 1:1 lock so Collab sour / promo size like cans */
-  .canwrap.promo img[src*="iron-goddess"],
+  /* t936u collab — tall Iron cutout; match can chapter rhythm (no 78vh stretch / gap under bottle) */
+  .canwrap.promo img[src*="iron-goddess"] {
+    width: auto;
+    max-width: min(100%, 320px);
+    max-height: 68vh;
+    height: auto;
+    object-fit: contain;
+    object-position: center bottom;
+  }
+  #chapter-iron .shot {
+    min-height: 0;
+    align-self: end;
+  }
   #chapter-iron .shot img {
     width: auto;
-    max-width: min(100%, 380px);
-    max-height: 78vh;
+    max-width: min(100%, 360px);
+    max-height: 74vh; /* same ceiling as .shot img cans */
     height: auto;
-    aspect-ratio: auto;
     object-fit: contain;
     object-position: center bottom;
   }
   @media (max-width: 800px) {
     .canwrap.promo img[src*="iron-goddess"] {
-      max-height: min(54vh, 460px);
-      max-width: min(100%, 260px);
+      max-height: min(46vh, 420px);
+      max-width: min(100%, 240px);
       width: auto;
     }
+    #chapter-iron .shot img { max-height: 54vh; } /* match mobile .shot img */
   }
 
   .promo-name {
