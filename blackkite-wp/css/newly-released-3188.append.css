@@ -1,0 +1,147 @@
+/*
+ * APPEND ONLY — staging page 3188.
+ * bk-wp-apply-standing: add this block at the END of Additional CSS.
+ * Never wipe, replace, or reorder the existing Customizer CSS chain.
+ * If CodeMirror is disabled for the apply path, still append. Do not select-all.
+ *
+ * NOT an apply. Do not push, paste, or APPLY this to live WordPress or page 4 (t67u).
+ * Staging page 3188 only until a separate explicit Jon GO.
+ * Cite t67u · t63u. claim_ge_99=false.
+ *
+ * Pitch-c / hero2 geometry for a date-ordered strip of 3.
+ * Hero size follows .hero-card (position), not an Iron Goddess filename,
+ * so a newer release can take the hero slot without a hand edit.
+ * Film, BOGOF, scrim, and chapter rules are intentionally absent.
+ */
+
+body.page-id-3188 .promo-eyebrow {
+  margin: 0 0 8px;
+  font-family: Outfit, sans-serif;
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--mute, #d4c4b0);
+  text-align: center;
+}
+
+body.page-id-3188 .canwrap.promo.pitch-c {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 12px;
+  padding: 3vh 2.5vw;
+  background: #0c0b09;
+}
+
+body.page-id-3188 .pitch-c .hero2 {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+}
+
+body.page-id-3188 .pitch-c .promo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  text-align: center;
+}
+
+body.page-id-3188 .pitch-c .promo-card a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+
+body.page-id-3188 .pitch-c .promo-card img {
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+body.page-id-3188 .pitch-c .hero-card img {
+  max-height: 58vh;
+  width: min(100%, 52vh);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+
+body.page-id-3188 .pitch-c .hero-card .promo-name {
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+body.page-id-3188 .pitch-c .side-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+}
+
+body.page-id-3188 .pitch-c .side-stack .promo-card img {
+  max-height: 24vh;
+  width: 100%;
+}
+
+body.page-id-3188 .pitch-c .side-stack .promo-card .promo-name {
+  font-size: clamp(16px, 2vw, 24px);
+}
+
+body.page-id-3188 .pitch-c .promo-card .promo-name {
+  margin: 0;
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--cream, #f7f1ea);
+}
+
+@media (max-width: 800px) {
+  body.page-id-3188 .canwrap.promo.pitch-c {
+    gap: 6px;
+    padding: 1vh 3vw 1.2vh;
+  }
+
+  body.page-id-3188 .pitch-c .hero2 {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  body.page-id-3188 .pitch-c .hero-card img {
+    max-height: 22vh;
+    width: min(100%, 36vh);
+  }
+
+  body.page-id-3188 .pitch-c .hero-card .promo-name {
+    font-size: clamp(16px, 4.5vw, 22px);
+  }
+
+  body.page-id-3188 .pitch-c .side-stack {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  body.page-id-3188 .pitch-c .side-stack .promo-card {
+    flex: 1;
+    gap: 2px;
+  }
+
+  body.page-id-3188 .pitch-c .side-stack .promo-card img {
+    max-height: 12vh;
+  }
+
+  body.page-id-3188 .pitch-c .side-stack .promo-card .promo-name {
+    font-size: clamp(13px, 3.4vw, 16px);
+  }
+
+  body.page-id-3188 .promo-eyebrow {
+    margin: 0 0 2px;
+    font-size: 10px;
+  }
+}
