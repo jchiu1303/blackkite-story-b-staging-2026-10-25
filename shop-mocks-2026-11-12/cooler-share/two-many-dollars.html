@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Two Many Dollars DIPA — Black Kite Cooler shelf (mockup)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@500;600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ground: #100e0c;
+      --cream: #f7f1ea;
+      --mute: #d4c4b0;
+      --panel: #1a1612;
+      --film: #0c0b09;
+      --chip: rgba(247,241,234,.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    html { overflow-x: hidden; }
+    body {
+      font-family: Outfit, "Noto Sans TC", "PingFang HK", "Noto Sans CJK TC", sans-serif;
+      background: var(--ground);
+      color: var(--cream);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; }
+    .badge {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      z-index: 80;
+      background: var(--film);
+      color: var(--cream);
+      font-family: Outfit, "Noto Sans TC", sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 8px 12px;
+      border: 1px solid var(--chip);
+    }
+    .storefront {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 0 48px;
+    }
+    .ticket-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px 24px;
+      align-items: end;
+      background: var(--film);
+      color: var(--cream);
+      padding: 20px 20px 16px;
+      border-bottom: 1px solid var(--chip);
+    }
+    .ticket-head .wordmark {
+      font-family: Outfit, "Noto Sans TC", sans-serif;
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 500;
+      letter-spacing: 0;
+      margin: 0;
+      line-height: 0.95;
+      color: var(--cream);
+    }
+    .ticket-head .wordmark span {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      font-weight: 400;
+      color: var(--mute);
+      margin-top: 8px;
+      text-transform: none;
+    }
+    .legal {
+      font-family: Outfit, "Noto Sans TC", sans-serif;
+      font-size: 12px;
+      letter-spacing: 0;
+      margin: 0;
+      max-width: 16rem;
+      text-align: right;
+      color: var(--mute);
+    }
+    .ticket-head a { color: var(--cream); }
+    .add {
+      margin-top: auto;
+      appearance: none;
+      width: 100%;
+      border: 1px solid var(--chip);
+      background: transparent;
+      color: var(--cream);
+      font-family: Outfit, "Noto Sans TC", sans-serif;
+      font-size: 12px;
+      letter-spacing: 0;
+      text-transform: none;
+      padding: 12px 16px;
+      min-height: 44px;
+      cursor: pointer;
+    }
+    .add:focus-visible { outline: 2px solid var(--cream); outline-offset: 2px; }
+    .colophon {
+      padding: 20px;
+      font-family: Outfit, "Noto Sans TC", sans-serif;
+      font-size: 12px;
+      color: var(--mute);
+      border-top: 1px solid var(--chip);
+      background: var(--ground);
+    }
+    .colophon p { margin: 0; }
+    @media (max-width: 640px) {
+      .ticket-head {
+        grid-template-columns: 1fr;
+        padding: 20px 16px 16px;
+        padding-right: 132px;
+      }
+      .legal { text-align: left; max-width: none; }
+      .badge { top: 8px; right: 8px; }
+    }
+
+
+    .ticket-head .wordmark a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .product-main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 8px 20px 48px;
+    }
+    .back-row { margin: 0; }
+    .back {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 10px 0;
+      font-family: Outfit, "Noto Sans TC", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0;
+      color: var(--cream);
+      text-decoration: none;
+    }
+    .back:focus-visible {
+      outline: 2px solid var(--cream);
+      outline-offset: 2px;
+    }
+    .product-band {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 24px 48px;
+      align-items: start;
+    }
+    .product-media {
+      position: relative;
+      background: var(--film);
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      padding: 16px 16px 0;
+      min-width: 0;
+    }
+    .product-media img {
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      max-height: min(680px, 68vh);
+      object-fit: contain;
+      object-position: center bottom;
+      display: block;
+    }
+    .product-hover-video {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center bottom;
+      opacity: 0;
+      pointer-events: none;
+      background: var(--film);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .product-media.has-hover-video:hover .product-hover-video,
+      .product-media.has-hover-video:focus-within .product-hover-video { opacity: 1; }
+    }
+    .product-media.has-hover-video.is-playing .product-hover-video { opacity: 1; }
+    @media (prefers-reduced-motion: reduce) {
+      .product-hover-video { display: none; }
+    }
+    .product-facts {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .product-facts .sku {
+      margin: 0;
+      font-family: Outfit, "Noto Sans TC", sans-serif;
+      font-size: 12px;
+      color: var(--mute);
+    }
+    .product-facts h1 {
+      margin: 0 0 4px;
+      font-size: clamp(22px, 2.2vw, 28px);
+      line-height: 1.2;
+      font-weight: 500;
+      color: var(--cream);
+      font-family: Outfit, "Noto Sans TC", sans-serif;
+    }
+    .product-facts .facing-style {
+      margin: 0;
+      font-family: Outfit, "Noto Sans TC", sans-serif;
+      font-size: 14px;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--mute);
+    }
+    .product-facts .price {
+      margin: 12px 0;
+      font-family: Outfit, "Noto Sans TC", sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      font-variant-numeric: lining-nums tabular-nums;
+      color: var(--cream);
+    }
+    .product-facts .add {
+      margin-top: 8px;
+      max-width: 16rem;
+    }
+
+    .product-writeup {
+      margin: 1.5rem 0 0;
+      max-width: 36rem;
+    }
+    .product-writeup p {
+      margin: 0 0 1rem;
+      font-family: Outfit, "Noto Sans TC", sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 400;
+      color: #ece4d8;
+    }
+    .product-writeup p:last-child { margin-bottom: 0; }
+    @media (max-width: 736px) {
+      .product-main { padding: 8px 16px 40px; }
+      .product-band {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .product-media { padding: 8px 8px 0; }
+      .product-media img { max-height: min(52vh, 420px); width: 100%; }
+      .product-facts .add { max-width: none; width: 100%; }
+      .product-writeup { margin-top: 6rem; padding-bottom: 3.5rem; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="badge">MOCKUP · not staging</div>
+  <div class="storefront">
+    <header class="ticket-head">
+      <p class="wordmark"><a href="index.html">Black Kite<span>Cooler shelf</span></a></p>
+      <p class="legal">18+ only · Hong Kong delivery · Free over HK$500</p>
+    </header>
+    <main class="product-main">
+      <p class="back-row"><a class="back" href="index.html">Back to cooler</a></p>
+      <div class="product-band">
+        <div class="product-media has-hover-video">
+          <img src="assets/2124-artboard-2-1-1.webp" alt="Two Many Dollars DIPA" width="480" height="640" loading="eager">
+          <video class="product-hover-video" muted loop playsinline webkit-playsinline preload="auto" poster="assets/hover-two-many-dollars-poster.jpg" aria-hidden="true">
+            <source src="assets/hover-two-many-dollars-web.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="product-facts">
+          <p class="sku">#2124</p>
+          <h1>Two Many Dollars DIPA</h1>
+          <p class="facing-style">Two Many Dollars DIPA 8.8% ABV | 88 IBU</p>
+          <p class="price">HKD 32</p>
+          <button type="button" class="add">Add to cart</button>
+          <div class="product-writeup">
+            <p>Featuring Talus, Sabro, and Ekuanot hops to create a gushing tropical fruit bomb of pomelo and grapefruit.</p>
+            <p>A lavish and bold DIPA that finishes with hints of coconut and caramel.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="colophon">
+      <p>Black Kite · Mockup only · Not staging, not live</p>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      document.querySelectorAll("button.add").forEach(function (btn) {
+        btn.addEventListener("click", function (ev) { ev.preventDefault(); });
+      });
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+      var well = document.querySelector(".product-media.has-hover-video");
+      if (!well) return;
+      var v = well.querySelector(".product-hover-video");
+      if (!v) return;
+      v.muted = true;
+      if (reduce) return;
+      if (fine) {
+        function play() { v.play().catch(function () {}); }
+        function stop() { v.pause(); try { v.currentTime = 0; } catch (e) {} }
+        well.addEventListener("mouseenter", play);
+        well.addEventListener("mouseleave", stop);
+        well.addEventListener("focusin", play);
+        well.addEventListener("focusout", function () { if (!well.matches(":hover")) stop(); });
+      } else {
+        function play() {
+          well.classList.add("is-playing");
+          v.play().catch(function () {});
+        }
+        function stop() {
+          well.classList.remove("is-playing");
+          v.pause();
+          try { v.currentTime = 0; } catch (e) {}
+        }
+        well.addEventListener("click", function (ev) {
+          ev.preventDefault();
+          ev.stopPropagation();
+          if (well.classList.contains("is-playing")) stop();
+          else play();
+        });
+        document.addEventListener("click", function (ev) {
+          if (!well.contains(ev.target) && well.classList.contains("is-playing")) stop();
+        });
+        if ("IntersectionObserver" in window) {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+              if (!en.isIntersecting && well.classList.contains("is-playing")) stop();
+            });
+          }, { threshold: 0 });
+          io.observe(well);
+        }
+      }
+    })();
+  </script>
+
+</body>
+</html>

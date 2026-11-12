@@ -345,6 +345,26 @@
       white-space: nowrap;
       border: 0;
     }
+
+    a.facing-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.facing-shot-link {
+      display: block;
+      min-width: 0;
+      color: inherit;
+      text-decoration: none;
+    }
+    .talker a.facing-link {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1 1 auto;
+      color: inherit;
+      text-decoration: none;
+      min-width: 0;
+    }
   </style>
 </head>
 <body>
@@ -366,32 +386,40 @@
       <h2 id="label-all" class="visually-hidden">All</h2>
       <div class="shelf">
 <article class="facing has-hover-video" id="cooler-all-3144" data-id="3144">
-          <div class="facing-shot">
+          <a class="facing-link facing-shot-link" href="flaming-tanager.html">
+            <div class="facing-shot">
             <img src="assets/3144-tanager-product-shot.png" alt="Flaming Tanager" width="480" height="640" loading="eager">
             <video class="facing-hover-video" muted loop playsinline webkit-playsinline preload="auto" aria-hidden="true">
               <source src="assets/hover-flaming-tanager-story.mp4" type="video/mp4">
             </video>
           </div>
+          </a>
           <div class="talker">
+            <a class="facing-link" href="flaming-tanager.html">
             <p class="sku">#3144</p>
             <h3>Flaming Tanager</h3>
             <p class="facing-style">Tropical Pale Ale 4.5% ABV | 45 IBU</p>
             <p class="price">HKD 35</p>
+            </a>
             <button type="button" class="add" data-id="3144">Add to cart</button>
           </div>
         </article>
         <article class="facing has-hover-video" id="cooler-all-2124" data-id="2124">
-          <div class="facing-shot">
+          <a class="facing-link facing-shot-link" href="two-many-dollars.html">
+            <div class="facing-shot">
             <img src="assets/2124-artboard-2-1-1.webp" alt="Two Many Dollars DIPA" width="480" height="640" loading="eager">
             <video class="facing-hover-video" muted loop playsinline webkit-playsinline preload="auto" poster="assets/hover-two-many-dollars-poster.jpg" aria-hidden="true">
               <source src="assets/hover-two-many-dollars-web.mp4" type="video/mp4">
             </video>
           </div>
+          </a>
           <div class="talker">
+            <a class="facing-link" href="two-many-dollars.html">
             <p class="sku">#2124</p>
             <h3>Two Many Dollars DIPA</h3>
             <p class="facing-style">Two Many Dollars DIPA 8.8% ABV | 88 IBU</p>
             <p class="price">HKD 32</p>
+            </a>
             <button type="button" class="add" data-id="2124">Add to cart</button>
           </div>
         </article>
@@ -480,32 +508,40 @@
       </header>
       <div class="shelf">
 <article class="facing has-hover-video" id="cooler-3144" data-id="3144">
-          <div class="facing-shot">
+          <a class="facing-link facing-shot-link" href="flaming-tanager.html">
+            <div class="facing-shot">
             <img src="assets/3144-tanager-product-shot.png" alt="Flaming Tanager" width="480" height="640" loading="eager">
             <video class="facing-hover-video" muted loop playsinline webkit-playsinline preload="auto" aria-hidden="true">
               <source src="assets/hover-flaming-tanager-story.mp4" type="video/mp4">
             </video>
           </div>
+          </a>
           <div class="talker">
+            <a class="facing-link" href="flaming-tanager.html">
             <p class="sku">#3144</p>
             <h3>Flaming Tanager</h3>
             <p class="facing-style">Tropical Pale Ale 4.5% ABV | 45 IBU</p>
             <p class="price">HKD 35</p>
+            </a>
             <button type="button" class="add" data-id="3144">Add to cart</button>
           </div>
         </article>
         <article class="facing has-hover-video" id="cooler-2124" data-id="2124">
-          <div class="facing-shot">
+          <a class="facing-link facing-shot-link" href="two-many-dollars.html">
+            <div class="facing-shot">
             <img src="assets/2124-artboard-2-1-1.webp" alt="Two Many Dollars DIPA" width="480" height="640" loading="eager">
             <video class="facing-hover-video" muted loop playsinline webkit-playsinline preload="auto" poster="assets/hover-two-many-dollars-poster.jpg" aria-hidden="true">
               <source src="assets/hover-two-many-dollars-web.mp4" type="video/mp4">
             </video>
           </div>
+          </a>
           <div class="talker">
+            <a class="facing-link" href="two-many-dollars.html">
             <p class="sku">#2124</p>
             <h3>Two Many Dollars DIPA</h3>
             <p class="facing-style">Two Many Dollars DIPA 8.8% ABV | 88 IBU</p>
             <p class="price">HKD 32</p>
+            </a>
             <button type="button" class="add" data-id="2124">Add to cart</button>
           </div>
         </article>
@@ -666,6 +702,7 @@
           }
           card.addEventListener("click", function (ev) {
             if (ev.target.closest("button.add")) return;
+            if (ev.target.closest("a.facing-link") && !ev.target.closest(".facing-shot")) return;
             ev.preventDefault();
             ev.stopPropagation();
             if (card.classList.contains("is-playing")) stop();

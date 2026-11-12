@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Two Many Dollars DIPA — BLACK KITE Beer Shop (Mockup)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --ground:#100e0c;
+    --cream:#f7f1ea;
+    --mute:#d4c4b0;
+    --line:rgba(212,196,176,.22);
+    --line-soft:rgba(212,196,176,.12);
+    --tile:rgba(247,241,234,.035);
+    --pad:1.25rem;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--ground);
+    color:var(--cream);
+    font-family:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-weight:300;
+    font-size:16px;
+    line-height:1.5;
+    letter-spacing:.005em;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%;height:auto;}
+  a{color:inherit;}
+  :focus-visible{
+    outline:2px solid var(--cream);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+  .badge{
+    position:fixed;
+    left:.75rem;
+    bottom:.75rem;
+    z-index:60;
+    margin:0;
+    padding:.3rem .55rem;
+    font-family:"Outfit",sans-serif;
+    font-size:.625rem;
+    font-weight:400;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--mute);
+    background:rgba(16,14,12,.82);
+    border:1px solid var(--line);
+    border-radius:2px;
+    pointer-events:none;
+  }
+  .site-header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:var(--ground);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+    padding:.9rem var(--pad);
+    max-width:1240px;
+    margin:0 auto;
+  }
+  .wordmark{
+    margin:0;
+    font-family:"Outfit",sans-serif;
+    font-size:.95rem;
+    font-weight:500;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--cream);
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    gap:1.1rem;
+  }
+  .nav a{
+    font-size:.75rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--mute);
+    padding:.25rem 0;
+    border-bottom:1px solid transparent;
+  }
+  .nav a[aria-current="page"]{
+    color:var(--cream);
+    border-bottom-color:var(--cream);
+  }
+  .cart{
+    display:inline-flex;
+    align-items:center;
+    gap:.4rem;
+    background:none;
+    border:1px solid var(--line);
+    border-radius:999px;
+    color:var(--cream);
+    font-family:"Outfit",sans-serif;
+    font-size:.7rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    padding:.4rem .7rem;
+    cursor:pointer;
+  }
+  .cart svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.4;}
+  .banner{
+    border-bottom:1px solid var(--line-soft);
+    background:rgba(247,241,234,.02);
+  }
+  .banner p{
+    max-width:1240px;
+    margin:0 auto;
+    padding:.5rem var(--pad);
+    font-size:.6875rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--mute);
+  }
+  .site-footer{
+    border-top:1px solid var(--line-soft);
+  }
+  .site-footer p{
+    max-width:1240px;
+    margin:0 auto;
+    padding:1.5rem var(--pad) 3.5rem;
+    font-size:.6875rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--mute);
+  }
+  @media (min-width:768px){
+    :root{--pad:2rem;}
+    .header-inner{padding:1.1rem var(--pad);}
+    .wordmark{font-size:1.05rem;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{
+      animation-duration:.001ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;
+      scroll-behavior:auto !important;
+    }
+  }
+
+
+  main.product-main{
+    max-width:1240px;
+    margin:0 auto;
+    padding:.35rem var(--pad) 4.5rem;
+  }
+  .back-row{margin:0;}
+  .back{
+    display:inline-flex;
+    align-items:center;
+    min-height:44px;
+    padding:.6rem 0;
+    font-family:"Outfit",sans-serif;
+    font-size:.75rem;
+    font-weight:400;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--cream);
+    text-decoration:none;
+  }
+  .product-band{
+    display:grid;
+    grid-template-columns:minmax(0,36rem) minmax(16rem,1fr);
+    gap:1.5rem 3rem;
+    align-items:start;
+  }
+  .product-media{
+    min-width:0;
+  }
+  .product-media .card-media{
+    position:relative;
+    margin:0;
+    overflow:hidden;
+    background:var(--tile);
+    border:1px solid var(--line-soft);
+  }
+  .product-media .card-media img{
+    width:100%;
+    aspect-ratio:4/5;
+    max-height:min(700px,68vh);
+    object-fit:contain;
+    object-position:center bottom;
+    background:transparent;
+  }
+  .product-hover-video{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center bottom;
+    opacity:0;
+    pointer-events:none;
+    background:var(--tile);
+  }
+  @media (hover:hover) and (pointer:fine){
+    .product-media.has-hover-video:hover .product-hover-video,
+    .product-media.has-hover-video:focus-within .product-hover-video{opacity:1;}
+  }
+  .product-media.has-hover-video.is-playing .product-hover-video{opacity:1;}
+  @media (prefers-reduced-motion:reduce){
+    .product-hover-video{display:none;}
+  }
+  .product-facts{
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    gap:.35rem;
+  }
+  .product-facts .eyebrow{
+    margin:0;
+    font-family:"Outfit",sans-serif;
+    font-size:.625rem;
+    font-weight:400;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--mute);
+  }
+  .product-facts h1{
+    margin:0;
+    font-family:"Newsreader",Georgia,serif;
+    font-weight:400;
+    font-size:clamp(1.75rem, 3vw, 2.125rem);
+    line-height:1.12;
+    letter-spacing:-.01em;
+    color:var(--cream);
+  }
+  .product-facts .promise{
+    margin:0;
+    font-size:.875rem;
+    color:var(--mute);
+  }
+  .product-facts .price{
+    margin:.85rem 0 .35rem;
+    font-family:"Outfit",sans-serif;
+    font-size:1.125rem;
+    font-weight:400;
+    letter-spacing:.04em;
+    color:var(--cream);
+    font-variant-numeric:tabular-nums;
+  }
+  .product-facts .chip{
+    appearance:none;
+    display:inline-block;
+    margin-top:.25rem;
+    padding:.55rem 1.05rem;
+    border:1px solid var(--line);
+    border-radius:999px;
+    background:transparent;
+    color:var(--cream);
+    font-family:"Outfit",sans-serif;
+    font-size:.6875rem;
+    font-weight:400;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    text-decoration:none;
+    white-space:nowrap;
+    cursor:pointer;
+    width:auto;
+    align-self:flex-start;
+  }
+  .product-facts .chip:hover{border-color:var(--cream);}
+
+  .product-writeup{
+    margin:1.5rem 0 0;
+    max-width:36rem;
+  }
+  .product-writeup p{
+    margin:0 0 1rem;
+    font-family:"Newsreader",Georgia,serif;
+    font-size:1.0625rem;
+    line-height:1.55;
+    font-weight:400;
+    color:var(--cream);
+  }
+  .product-writeup p:last-child{margin-bottom:0;}
+  @media (min-width:768px){
+    main.product-main{padding:.5rem var(--pad) 10rem;}
+  }
+  main.product-main ~ .site-footer p{
+    padding-left:7.25rem;
+  }
+  @media (max-width:736px){
+    .product-band{
+      grid-template-columns:1fr;
+      gap:1rem;
+    }
+    .product-media .card-media img{
+      max-height:min(52vh,420px);
+    }
+    .product-facts .chip{align-self:stretch;text-align:center;}
+    .product-writeup{margin-top:6rem;padding-bottom:3.5rem;}
+  }
+
+</style>
+</head>
+<body>
+<p class="badge">MOCKUP · not staging</p>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" href="index.html">Black Kite</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Shop</a>
+      <button class="cart" type="button" aria-label="Cart, 0 items">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 4h2.2l2.1 10.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L20.5 7H6.2"/>
+          <circle cx="10" cy="20" r="1.3"/>
+          <circle cx="17.5" cy="20" r="1.3"/>
+        </svg>
+        <span>Cart</span>
+      </button>
+    </nav>
+  </div>
+</header>
+<div class="banner">
+  <p>18+ only · Hong Kong delivery · Free over HK$500</p>
+</div>
+<main class="product-main">
+  <p class="back-row"><a class="back" href="index.html">Back to shop</a></p>
+  <div class="product-band">
+    <div class="product-media has-hover-video">
+      <figure class="card-media">
+        <img src="assets/2124-artboard-2-1-1.webp" alt="Two Many Dollars DIPA, product still" width="800" height="1000" loading="eager">
+        <video class="product-hover-video" muted loop playsinline webkit-playsinline preload="auto" poster="assets/hover-two-many-dollars-poster.jpg" aria-hidden="true">
+          <source src="assets/hover-two-many-dollars-web.mp4" type="video/mp4">
+        </video>
+      </figure>
+    </div>
+    <div class="product-facts">
+      <p class="eyebrow">DIPA</p>
+      <h1>Two Many Dollars DIPA</h1>
+      <p class="promise">Two Many Dollars DIPA 8.8% ABV | 88 IBU</p>
+      <p class="price">HKD 32</p>
+      <button type="button" class="chip">Buy beer</button>
+          <div class="product-writeup">
+            <p>Featuring Talus, Sabro, and Ekuanot hops to create a gushing tropical fruit bomb of pomelo and grapefruit.</p>
+            <p>A lavish and bold DIPA that finishes with hints of coconut and caramel.</p>
+          </div>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <p>Black Kite · Mockup only · Not staging, not live</p>
+</footer>
+
+<script>
+(function(){
+  document.querySelectorAll("button.chip, button.cart").forEach(function(btn){
+    btn.addEventListener("click", function(e){ e.preventDefault(); });
+  });
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  var well = document.querySelector(".product-media.has-hover-video");
+  if (!well) return;
+  var v = well.querySelector(".product-hover-video");
+  if (!v) return;
+  v.muted = true;
+  if (reduce) return;
+  if (fine) {
+    function play() { v.play().catch(function () {}); }
+    function stop() { v.pause(); try { v.currentTime = 0; } catch (e) {} }
+    well.addEventListener("mouseenter", play);
+    well.addEventListener("mouseleave", stop);
+    well.addEventListener("focusin", play);
+    well.addEventListener("focusout", function () { if (!well.matches(":hover")) stop(); });
+  } else {
+    function play() {
+      well.classList.add("is-playing");
+      v.play().catch(function () {});
+    }
+    function stop() {
+      well.classList.remove("is-playing");
+      v.pause();
+      try { v.currentTime = 0; } catch (e) {}
+    }
+    well.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      if (well.classList.contains("is-playing")) stop();
+      else play();
+    });
+    document.addEventListener("click", function (ev) {
+      if (!well.contains(ev.target) && well.classList.contains("is-playing")) stop();
+    });
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting && well.classList.contains("is-playing")) stop();
+        });
+      }, { threshold: 0 });
+      io.observe(well);
+    }
+  }
+})();
+</script>
+
+</body>
+</html>
