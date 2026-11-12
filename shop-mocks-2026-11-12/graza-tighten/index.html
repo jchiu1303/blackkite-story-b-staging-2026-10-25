@@ -465,7 +465,7 @@
     <div class="band-a">
 
       <article class="card has-hover-video">
-        <a class="product-link" href="#">
+        <a class="product-link" href="flaming-tanager.html">
           <figure class="card-media">
             <img src="assets/3144-tanager-product-shot.png" alt="Flaming Tanager, product still" width="800" height="1000" loading="eager" fetchpriority="high" decoding="async">
             <video class="card-hover-video" muted loop playsinline webkit-playsinline preload="auto" aria-hidden="true">
@@ -478,14 +478,14 @@
             <p class="promise">Bright tropical hops, easy can</p>
             <div class="card-foot">
               <span class="price">HKD 35</span>
-              <a class="chip" href="#">Buy beer</a>
+              <span class="chip">Buy beer</span>
             </div>
           </div>
         </a>
       </article>
 
       <article class="card has-hover-video">
-        <a class="product-link" href="#">
+        <a class="product-link" href="two-many-dollars.html">
           <figure class="card-media">
             <img src="assets/2124-artboard-2-1-1.webp" alt="Two Many Dollars DIPA, product still" width="800" height="1000" loading="eager" decoding="async">
             <video class="card-hover-video" muted loop playsinline webkit-playsinline preload="auto" poster="assets/hover-two-many-dollars-poster.jpg" aria-hidden="true">
@@ -498,7 +498,7 @@
             <p class="promise">Two Many Dollars DIPA 8.8% ABV | 88 IBU</p>
             <div class="card-foot">
               <span class="price">HKD 32</span>
-              <a class="chip" href="#">Buy beer</a>
+              <span class="chip">Buy beer</span>
             </div>
           </div>
         </a>
@@ -569,7 +569,7 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#">
+        <a class="product-link" href="flaming-tanager.html">
           <figure class="card-media">
             <img src="assets/3144-tanager-product-shot.png" alt="Flaming Tanager, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -737,7 +737,7 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#">
+        <a class="product-link" href="two-many-dollars.html">
           <figure class="card-media">
             <img src="assets/2124-artboard-2-1-1.webp" alt="Two Many Dollars DIPA, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -852,6 +852,10 @@
         }
         card.addEventListener("click", function (ev) {
           if (ev.target.closest("a.chip")) return;
+          var media = ev.target.closest(".card-media");
+          var link = ev.target.closest("a.product-link");
+          var href = link && link.getAttribute("href");
+          if (href && href !== "#" && !media) return;
           ev.preventDefault();
           ev.stopPropagation();
           if (card.classList.contains("is-playing")) stop();
