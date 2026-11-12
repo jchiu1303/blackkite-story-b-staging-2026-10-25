@@ -622,19 +622,44 @@
           card.addEventListener("mouseleave", stop);
           card.addEventListener("focusin", play);
           card.addEventListener("focusout", function () { if (!card.matches(":hover")) stop(); });
-        } else if ("IntersectionObserver" in window) {
-          var io = new IntersectionObserver(function (entries) {
-            entries.forEach(function (en) {
-              if (en.isIntersecting && en.intersectionRatio >= 0.55) {
-                card.classList.add("is-playing");
-                v.play().catch(function () {});
-              } else {
-                card.classList.remove("is-playing");
-                v.pause();
-              }
+        } else {
+          function play() {
+            card.classList.add("is-playing");
+            v.play().catch(function () {});
+          }
+          function stop() {
+            card.classList.remove("is-playing");
+            v.pause();
+            try { v.currentTime = 0; } catch (e) {}
+          }
+          function stopOthers() {
+            document.querySelectorAll(".facing.has-hover-video.is-playing").forEach(function (other) {
+              if (other === card) return;
+              other.classList.remove("is-playing");
+              var ov = other.querySelector(".facing-hover-video");
+              if (!ov) return;
+              ov.pause();
+              try { ov.currentTime = 0; } catch (e) {}
             });
-          }, { threshold: 0.55 });
-          io.observe(card);
+          }
+          card.addEventListener("click", function (ev) {
+            if (ev.target.closest("button.add")) return;
+            ev.preventDefault();
+            ev.stopPropagation();
+            if (card.classList.contains("is-playing")) stop();
+            else { stopOthers(); play(); }
+          });
+          document.addEventListener("click", function (ev) {
+            if (!card.contains(ev.target) && card.classList.contains("is-playing")) stop();
+          });
+          if ("IntersectionObserver" in window) {
+            var io = new IntersectionObserver(function (entries) {
+              entries.forEach(function (en) {
+                if (!en.isIntersecting && card.classList.contains("is-playing")) stop();
+              });
+            }, { threshold: 0 });
+            io.observe(card);
+          }
         }
       });
     })();
