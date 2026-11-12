@@ -1,0 +1,828 @@
+<!--
+  t580u · t579u · t579s2209 · t300u · t199u · t183u · t179u · t167u · Soft HOLD · claim_ge_99=false · mockup FIRST nothing staging/WP/live.
+  Copy of the t300 Graza pack, tightened in this folder only. No lifestyle hero. No hover video. Cards stay stills.
+  Three unique non-hover row films (official stills + SOURCE_COPY lines, ffmpeg/still compositing only).
+  Product / Shop / Buy beer links keep existing https://blackkite.hk/bkstaging/… hrefs (not a site apply).
+  Flower Market is a tomato gose, not an IPA. Unpack, zip, and t354/t382 folders were not edited.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BLACK KITE — Beer Shop (Mockup)</title>
+<meta name="description" content="BLACK KITE — small-batch craft beer. Mockup only, not staging.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --ground:#100e0c;
+    --cream:#f7f1ea;
+    --mute:#d4c4b0;
+    --line:rgba(212,196,176,.22);
+    --line-soft:rgba(212,196,176,.12);
+    --tile:rgba(247,241,234,.035);
+    --pad:1.25rem;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+
+  html{-webkit-text-size-adjust:100%;}
+
+  body{
+    margin:0;
+    background:var(--ground);
+    color:var(--cream);
+    font-family:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-weight:300;
+    font-size:16px;
+    line-height:1.5;
+    letter-spacing:.005em;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{display:block;max-width:100%;height:auto;}
+
+  a{color:inherit;}
+
+  .product-link{
+    color:inherit;
+    text-decoration:none;
+  }
+
+  .card > .product-link{
+    display:flex;
+    flex-direction:column;
+  }
+
+  :focus-visible{
+    outline:2px solid var(--cream);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  .badge{
+    position:fixed;
+    left:.75rem;
+    bottom:.75rem;
+    z-index:60;
+    margin:0;
+    padding:.3rem .55rem;
+    font-family:"Outfit",sans-serif;
+    font-size:.625rem;
+    font-weight:400;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--mute);
+    background:rgba(16,14,12,.82);
+    border:1px solid var(--line);
+    border-radius:2px;
+    pointer-events:none;
+  }
+
+  .site-header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:var(--ground);
+    border-bottom:1px solid var(--line-soft);
+  }
+
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+    padding:.9rem var(--pad);
+    max-width:1240px;
+    margin:0 auto;
+  }
+
+  .wordmark{
+    margin:0;
+    font-family:"Outfit",sans-serif;
+    font-size:.95rem;
+    font-weight:500;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--cream);
+    text-decoration:none;
+    white-space:nowrap;
+  }
+
+  .nav{
+    display:flex;
+    align-items:center;
+    gap:1.1rem;
+  }
+
+  .nav a{
+    font-size:.75rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--mute);
+    padding:.25rem 0;
+    border-bottom:1px solid transparent;
+  }
+
+  .nav a[aria-current="page"]{
+    color:var(--cream);
+    border-bottom-color:var(--cream);
+  }
+
+  .cart{
+    display:inline-flex;
+    align-items:center;
+    gap:.4rem;
+    background:none;
+    border:1px solid var(--line);
+    border-radius:999px;
+    color:var(--cream);
+    font-family:"Outfit",sans-serif;
+    font-size:.7rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    padding:.4rem .7rem;
+    cursor:pointer;
+  }
+
+  .cart svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.4;}
+
+  .banner{
+    border-bottom:1px solid var(--line-soft);
+    background:rgba(247,241,234,.02);
+  }
+
+  .banner p{
+    max-width:1240px;
+    margin:0 auto;
+    padding:.5rem var(--pad);
+    font-size:.6875rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--mute);
+  }
+
+  .visually-hidden{
+    position:absolute !important;
+    width:1px;
+    height:1px;
+    padding:0;
+    margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+    border:0;
+  }
+
+  .row-film{
+    position:relative;
+    width:100%;
+    height:auto;
+    aspect-ratio:1280/400;
+    margin:0 0 1.25rem;
+    overflow:hidden;
+    background:var(--ground);
+    border:1px solid var(--line-soft);
+  }
+
+  .row-film-poster,
+  .row-film video{
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio:1280/400;
+    object-fit:contain;
+    object-position:center center;
+    background:var(--ground);
+  }
+
+  .row-film video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+  }
+
+  .band-b-tight{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:.9rem;
+  }
+
+  .band-b-tight + .row-film{margin-top:1.25rem;}
+
+  .band-b-tight + .band-b{margin-top:.9rem;}
+
+  main{
+    max-width:1240px;
+    margin:0 auto;
+    padding:2rem var(--pad) 4.5rem;
+  }
+
+  .section + .section{margin-top:3.25rem;}
+
+  .section-label{
+    display:flex;
+    align-items:center;
+    gap:.85rem;
+    margin:0 0 1.25rem;
+    font-family:"Outfit",sans-serif;
+    font-size:.6875rem;
+    font-weight:400;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--mute);
+  }
+
+  .section-label::after{
+    content:"";
+    flex:1 1 auto;
+    height:1px;
+    background:var(--line-soft);
+  }
+
+  .band-a{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1.5rem;
+  }
+
+  .card{
+    display:flex;
+    flex-direction:column;
+    background:transparent;
+  }
+
+
+  .card-media{
+    position:relative;
+    margin:0;
+    overflow:hidden;
+    background:var(--tile);
+    border:1px solid var(--line-soft);
+  }
+
+  .card-media img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:contain;
+    object-position:center bottom;
+    background:transparent;
+  }
+
+  .card-body{
+    display:flex;
+    flex-direction:column;
+    gap:.35rem;
+    padding-top:.9rem;
+  }
+
+  .eyebrow{
+    margin:0;
+    font-family:"Outfit",sans-serif;
+    font-size:.625rem;
+    font-weight:400;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--mute);
+  }
+
+  .card-title{
+    margin:0;
+    font-family:"Newsreader",Georgia,serif;
+    font-weight:400;
+    font-size:1.75rem;
+    line-height:1.12;
+    letter-spacing:-.01em;
+    color:var(--cream);
+  }
+
+  .promise{
+    margin:0;
+    font-size:.875rem;
+    color:var(--mute);
+  }
+
+  .card-foot{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+    margin-top:.85rem;
+  }
+
+  .price{
+    font-family:"Outfit",sans-serif;
+    font-size:.9375rem;
+    font-weight:400;
+    letter-spacing:.04em;
+    color:var(--cream);
+    font-variant-numeric:tabular-nums;
+  }
+
+  .chip{
+    display:inline-block;
+    padding:.55rem 1.05rem;
+    border:1px solid var(--line);
+    border-radius:999px;
+    background:transparent;
+    color:var(--cream);
+    font-family:"Outfit",sans-serif;
+    font-size:.6875rem;
+    font-weight:400;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    text-decoration:none;
+    white-space:nowrap;
+    transition:border-color .18s ease, color .18s ease;
+  }
+
+  .chip:hover{border-color:var(--cream);}
+
+  .band-b{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:.9rem;
+  }
+
+  .mini .card-media img{
+    aspect-ratio:1/1;
+    object-fit:contain;
+    object-position:center bottom;
+    background:transparent;
+  }
+
+  .mini .card-body{
+    gap:.2rem;
+    padding-top:.6rem;
+  }
+
+  .mini .card-title{
+    font-size:1.0625rem;
+    line-height:1.2;
+  }
+
+  .mini .price{
+    font-size:.8125rem;
+    color:var(--mute);
+  }
+
+  .site-footer{
+    border-top:1px solid var(--line-soft);
+  }
+
+  .site-footer p{
+    max-width:1240px;
+    margin:0 auto;
+    padding:1.5rem var(--pad) 3.5rem;
+    font-size:.6875rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--mute);
+  }
+
+  @media (min-width:768px){
+    :root{--pad:2rem;}
+    .header-inner{padding:1.1rem var(--pad);}
+    .wordmark{font-size:1.05rem;}
+    main{padding:3rem var(--pad) 5.5rem;}
+    .band-b-tight{
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:1.25rem;
+    }
+    .band-b-tight + .band-b{margin-top:1.25rem;}
+    .band-a{
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:2rem 1.75rem;
+    }
+    .band-a > .card:nth-child(3){
+      grid-column:1 / -1;
+      max-width:50%;
+    }
+    .card-title{font-size:2.125rem;}
+    .band-b{
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:1.25rem;
+    }
+    .section + .section{margin-top:4.5rem;}
+  }
+
+  @media (min-width:1080px){
+    .band-a{
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:1.1rem 1rem;
+    }
+    .band-a > .card:nth-child(3){
+      grid-column:auto;
+      max-width:none;
+    }
+    .band-a .card-body{padding-top:.65rem;}
+    .band-a .card-foot{margin-top:.55rem;}
+    .band-b{grid-template-columns:repeat(4,minmax(0,1fr));}
+    .band-b-tight{
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:0.7rem;
+    }
+    .band-b-tight .card-media img{aspect-ratio:4/5;}
+    main{padding:2rem var(--pad) 5.5rem;}
+    .section + .section{margin-top:2.5rem;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{
+      animation-duration:.001ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;
+      scroll-behavior:auto !important;
+    }
+    .row-film video{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<p class="badge">MOCKUP · not staging</p>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" href="#"">Black Kite</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#"" aria-current="page">Shop</a>
+      <button class="cart" type="button" aria-label="Cart, 0 items">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 4h2.2l2.1 10.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L20.5 7H6.2"/>
+          <circle cx="10" cy="20" r="1.3"/>
+          <circle cx="17.5" cy="20" r="1.3"/>
+        </svg>
+        <span>Cart</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div class="banner">
+  <p>18+ only · Hong Kong delivery · Free over HK$500</p>
+</div>
+
+<main>
+
+  <section class="section" aria-labelledby="newly-released">
+    <h2 class="section-label" id="newly-released">Newly released</h2>
+
+    <figure class="row-film">
+      <img class="row-film-poster" src="assets/row-film-a.jpg" alt="" width="1280" height="400">
+      <video muted loop playsinline webkit-playsinline autoplay preload="metadata" poster="assets/row-film-a.jpg" aria-label="Newly released beers, short film">
+        <source src="assets/row-film-a.mp4" type="video/mp4">
+      </video>
+    </figure>
+
+    <div class="band-a">
+
+      <article class="card">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/3144-tanager-product-shot.png" alt="Flaming Tanager, product still" width="800" height="1000" loading="eager" fetchpriority="high" decoding="async">
+          </figure>
+          <div class="card-body">
+            <p class="eyebrow">Tropical Pale Ale</p>
+            <h3 class="card-title">Flaming Tanager</h3>
+            <p class="promise">Bright tropical hops, easy can</p>
+            <div class="card-foot">
+              <span class="price">HKD 35</span>
+              <a class="chip" href="#"">Buy beer</a>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="card">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/3166-iron-goddess-shop-product-shot.png" alt="Iron Goddess, product still" width="800" height="1000" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <p class="eyebrow">Collab sour</p>
+            <h3 class="card-title">Iron Goddess</h3>
+            <p class="promise">Holy Goat collab · strawberries &amp; oolong</p>
+            <div class="card-foot">
+              <span class="price">HKD 125</span>
+              <a class="chip" href="#"">Buy beer</a>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="card">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/3155-flower-market-product-shot.png" alt="Flower Market, product still" width="800" height="1000" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <p class="eyebrow">Tomato Gose</p>
+            <h3 class="card-title">Flower Market</h3>
+            <p class="promise">Savoury-sour, market-stall vibe</p>
+            <div class="card-foot">
+              <span class="price">HKD 32</span>
+              <a class="chip" href="#"">Buy beer</a>
+            </div>
+          </div>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="all-beers">
+    <h2 class="section-label" id="all-beers">All beers</h2>
+
+    <figure class="row-film">
+      <img class="row-film-poster" src="assets/row-film-b1.jpg" alt="" width="1280" height="400">
+      <video muted loop playsinline webkit-playsinline autoplay preload="none" poster="assets/row-film-b1.jpg" aria-label="All beers, first row, short film">
+        <source src="assets/row-film-b1.mp4" type="video/mp4">
+      </video>
+    </figure>
+
+    <div class="band-b-tight">
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/3149-heron-product-shot.png" alt="Heron Hallertau Single Hop IPA, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Heron Hallertau Single Hop IPA</h3>
+            <span class="price">HKD 35</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/3135-dsc08369.png" alt="Skybound Lager, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Skybound Lager</h3>
+            <span class="price">HKD 25</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/2284-czechmate-product-shot-e1783323992765.webp" alt="Czechmate Czech Dark Lager, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Czechmate Czech Dark Lager</h3>
+            <span class="price">HKD 30</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/2269-untitled-1.webp" alt="Black Kite x Pat Chun Sweetened Vinegar Oaked Sour, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Black Kite x Pat Chun Sweetened Vinegar Oaked Sour</h3>
+            <span class="price">HKD 44</span>
+          </div>
+        </a>
+      </article>
+
+    </div>
+
+    <figure class="row-film">
+      <img class="row-film-poster" src="assets/row-film-b2.jpg" alt="" width="1280" height="400">
+      <video muted loop playsinline webkit-playsinline autoplay preload="none" poster="assets/row-film-b2.jpg" aria-label="All beers, second row, short film">
+        <source src="assets/row-film-b2.mp4" type="video/mp4">
+      </video>
+    </figure>
+
+    <div class="band-b-tight">
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/2264-toast-the-day-product-shot.webp" alt="Earth Day Tribute: Toast the Day Kvass-inspired Ale, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Earth Day Tribute: Toast the Day Kvass-inspired Ale</h3>
+            <span class="price">HKD 30</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/2258-badass-brew-product-shot.png" alt="呢度重女 Badass Brew Hazy IPA, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">呢度重女 Badass Brew Hazy IPA</h3>
+            <span class="price">HKD 30</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/2253-firefly-4.webp" alt="Pacific Highway West Coast IPA, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Pacific Highway West Coast IPA</h3>
+            <span class="price">HKD 35</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/2246-gemini_generated_image_ashpayashpayashp.png" alt="My Roman Empire Vienna Lager, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">My Roman Empire Vienna Lager</h3>
+            <span class="price">HKD 25</span>
+          </div>
+        </a>
+      </article>
+
+    </div>
+
+    <div class="band-b">
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/2240-adobe-express-file-1.webp" alt="Black Kite x IMPLY “Dark Circuit” Black IPA, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Black Kite x IMPLY “Dark Circuit” Black IPA</h3>
+            <span class="price">HKD 35</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/2236-yosemite-2-product-shot.webp" alt="El Capitan – Yosemite 2.0 American IPA, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">El Capitan – Yosemite 2.0 American IPA</h3>
+            <span class="price">HKD 35</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/2233-1774335491267-019d1ea2-cbc4-791f-8e11-2cccbb0bab.png" alt="Peanut Butter &amp; Jelly Set, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Peanut Butter &amp; Jelly Set</h3>
+            <span class="price">HKD 180</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/2221-1774493119271-019d2807-e7c2-75b3-b8de-cde26d82dd.png" alt="&amp; Jelly Strawberry Sour, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">&amp; Jelly Strawberry Sour</h3>
+            <span class="price">HKD 32</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/2217-from_the_label_of_the_can_remo_nano_banana_2_092.png" alt="Peanut Butter Milkshake IPA, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Peanut Butter Milkshake IPA</h3>
+            <span class="price">HKD 32</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/2213-bk-blink-box-e1764044521331.webp" alt="Black Kite Brewery Roulette Blind Box, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Black Kite Brewery Roulette Blind Box</h3>
+            <span class="price">HKD 168</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/2124-artboard-2-1-1.webp" alt="Two Many Dollars DIPA, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Two Many Dollars DIPA</h3>
+            <span class="price">HKD 32</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/2120-dsc08419.png" alt="Easy Glider Pale Ale, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Easy Glider Pale Ale</h3>
+            <span class="price">HKD 32</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/1200-artboard-2-1.webp" alt="Black Kite Graphic Tee, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Black Kite Graphic Tee</h3>
+            <span class="price">HKD 180</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/1135-blue-taxi-pp.png" alt="Blue Taxi Cold IPA, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Blue Taxi Cold IPA</h3>
+            <span class="price">HKD 384</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#"">
+          <figure class="card-media">
+            <img src="assets/92-dsc08374-1.png" alt="Birds of Prey IPA, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Birds of Prey IPA</h3>
+            <span class="price">HKD 32</span>
+          </div>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Black Kite · Mockup only · Not staging, not live</p>
+</footer>
+
+<script>
+(function(){
+  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll(".row-film video").forEach(function(v){
+    v.muted=true;
+    if(reduce){
+      v.removeAttribute("autoplay");
+      v.pause();
+    } else {
+      v.play().catch(function(){});
+    }
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+  document.querySelectorAll('a[href="#"]').forEach(function(a){
+    a.addEventListener("click", function(ev){ ev.preventDefault(); });
+  });
+})();
+</script>
+</body>
+</html>
