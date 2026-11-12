@@ -397,12 +397,8 @@
     }
     .band-b-tight + .band-b{margin-top:1.25rem;}
     .band-a{
-      grid-template-columns:repeat(2,minmax(0,1fr));
+      grid-template-columns:repeat(3,minmax(0,1fr));
       gap:2rem 1.75rem;
-    }
-    .band-a > .card:nth-child(3){
-      grid-column:1 / -1;
-      max-width:50%;
     }
     .card-title{font-size:2.125rem;}
     .band-b{
@@ -416,10 +412,6 @@
     .band-a{
       grid-template-columns:repeat(3,minmax(0,1fr));
       gap:1.1rem 1rem;
-    }
-    .band-a > .card:nth-child(3){
-      grid-column:auto;
-      max-width:none;
     }
     .band-a .card-body{padding-top:.65rem;}
     .band-a .card-foot{margin-top:.55rem;}
@@ -450,9 +442,9 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <a class="wordmark" href="#"">Black Kite</a>
+    <a class="wordmark" href="#">Black Kite</a>
     <nav class="nav" aria-label="Primary">
-      <a href="#"" aria-current="page">Shop</a>
+      <a href="#" aria-current="page">Shop</a>
       <button class="cart" type="button" aria-label="Cart, 0 items">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <path d="M3 4h2.2l2.1 10.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L20.5 7H6.2"/>
@@ -474,36 +466,12 @@
   <section class="section" aria-labelledby="newly-released">
     <h2 class="section-label" id="newly-released">Newly released</h2>
 
-    <figure class="row-film">
-      <img class="row-film-poster" src="assets/row-film-a.jpg" alt="" width="1280" height="400">
-      <video muted loop playsinline webkit-playsinline autoplay preload="metadata" poster="assets/row-film-a.jpg" aria-label="Newly released beers, short film">
-        <source src="assets/row-film-a.mp4" type="video/mp4">
-      </video>
-    </figure>
-
     <div class="band-a">
 
       <article class="card">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
-            <img src="assets/3144-tanager-product-shot.png" alt="Flaming Tanager, product still" width="800" height="1000" loading="eager" fetchpriority="high" decoding="async">
-          </figure>
-          <div class="card-body">
-            <p class="eyebrow">Tropical Pale Ale</p>
-            <h3 class="card-title">Flaming Tanager</h3>
-            <p class="promise">Bright tropical hops, easy can</p>
-            <div class="card-foot">
-              <span class="price">HKD 35</span>
-              <a class="chip" href="#"">Buy beer</a>
-            </div>
-          </div>
-        </a>
-      </article>
-
-      <article class="card">
-        <a class="product-link" href="#"">
-          <figure class="card-media">
-            <img src="assets/3166-iron-goddess-shop-product-shot.png" alt="Iron Goddess, product still" width="800" height="1000" loading="eager" decoding="async">
+            <img src="assets/3166-iron-goddess-shop-product-shot.png" alt="Iron Goddess, product still" width="800" height="1000" loading="eager" fetchpriority="high" decoding="async">
           </figure>
           <div class="card-body">
             <p class="eyebrow">Collab sour</p>
@@ -511,14 +479,14 @@
             <p class="promise">Holy Goat collab · strawberries &amp; oolong</p>
             <div class="card-foot">
               <span class="price">HKD 125</span>
-              <a class="chip" href="#"">Buy beer</a>
+              <a class="chip" href="#">Buy beer</a>
             </div>
           </div>
         </a>
       </article>
 
       <article class="card">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/3155-flower-market-product-shot.png" alt="Flower Market, product still" width="800" height="1000" loading="eager" decoding="async">
           </figure>
@@ -528,7 +496,24 @@
             <p class="promise">Savoury-sour, market-stall vibe</p>
             <div class="card-foot">
               <span class="price">HKD 32</span>
-              <a class="chip" href="#"">Buy beer</a>
+              <a class="chip" href="#">Buy beer</a>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="card">
+        <a class="product-link" href="#">
+          <figure class="card-media">
+            <img src="assets/3149-heron-product-shot.png" alt="Heron Hallertau Single Hop IPA, product still" width="800" height="1000" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <p class="eyebrow">Single Hop IPA</p>
+            <h3 class="card-title">Heron</h3>
+            <p class="promise">Single Hop IPA 6.2% ABV | 35 IBU</p>
+            <div class="card-foot">
+              <span class="price">HKD 35</span>
+              <a class="chip" href="#">Buy beer</a>
             </div>
           </div>
         </a>
@@ -540,17 +525,34 @@
   <section class="section" aria-labelledby="all-beers">
     <h2 class="section-label" id="all-beers">All beers</h2>
 
-    <figure class="row-film">
-      <img class="row-film-poster" src="assets/row-film-b1.jpg" alt="" width="1280" height="400">
-      <video muted loop playsinline webkit-playsinline autoplay preload="none" poster="assets/row-film-b1.jpg" aria-label="All beers, first row, short film">
-        <source src="assets/row-film-b1.mp4" type="video/mp4">
-      </video>
-    </figure>
-
-    <div class="band-b-tight">
+    <div class="band-b">
 
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
+          <figure class="card-media">
+            <img src="assets/3166-iron-goddess-shop-product-shot.png" alt="Iron Goddess, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Iron Goddess</h3>
+            <span class="price">HKD 125</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#">
+          <figure class="card-media">
+            <img src="assets/3155-flower-market-product-shot.png" alt="Flower Market, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Flower Market</h3>
+            <span class="price">HKD 32</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/3149-heron-product-shot.png" alt="Heron Hallertau Single Hop IPA, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -562,7 +564,19 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
+          <figure class="card-media">
+            <img src="assets/3144-tanager-product-shot.png" alt="Flaming Tanager, product still" width="600" height="800" loading="eager" decoding="async">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Flaming Tanager</h3>
+            <span class="price">HKD 35</span>
+          </div>
+        </a>
+      </article>
+
+      <article class="card mini">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/3135-dsc08369.png" alt="Skybound Lager, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -574,7 +588,7 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/2284-czechmate-product-shot-e1783323992765.webp" alt="Czechmate Czech Dark Lager, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -586,7 +600,7 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/2269-untitled-1.webp" alt="Black Kite x Pat Chun Sweetened Vinegar Oaked Sour, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -597,19 +611,8 @@
         </a>
       </article>
 
-    </div>
-
-    <figure class="row-film">
-      <img class="row-film-poster" src="assets/row-film-b2.jpg" alt="" width="1280" height="400">
-      <video muted loop playsinline webkit-playsinline autoplay preload="none" poster="assets/row-film-b2.jpg" aria-label="All beers, second row, short film">
-        <source src="assets/row-film-b2.mp4" type="video/mp4">
-      </video>
-    </figure>
-
-    <div class="band-b-tight">
-
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/2264-toast-the-day-product-shot.webp" alt="Earth Day Tribute: Toast the Day Kvass-inspired Ale, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -621,7 +624,7 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/2258-badass-brew-product-shot.png" alt="呢度重女 Badass Brew Hazy IPA, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -633,7 +636,7 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/2253-firefly-4.webp" alt="Pacific Highway West Coast IPA, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -645,7 +648,7 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/2246-gemini_generated_image_ashpayashpayashp.png" alt="My Roman Empire Vienna Lager, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -656,12 +659,8 @@
         </a>
       </article>
 
-    </div>
-
-    <div class="band-b">
-
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/2240-adobe-express-file-1.webp" alt="Black Kite x IMPLY “Dark Circuit” Black IPA, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -673,7 +672,7 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/2236-yosemite-2-product-shot.webp" alt="El Capitan – Yosemite 2.0 American IPA, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -685,7 +684,7 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/2233-1774335491267-019d1ea2-cbc4-791f-8e11-2cccbb0bab.png" alt="Peanut Butter &amp; Jelly Set, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -697,7 +696,7 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/2221-1774493119271-019d2807-e7c2-75b3-b8de-cde26d82dd.png" alt="&amp; Jelly Strawberry Sour, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -709,7 +708,7 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/2217-from_the_label_of_the_can_remo_nano_banana_2_092.png" alt="Peanut Butter Milkshake IPA, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -721,7 +720,7 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/2213-bk-blink-box-e1764044521331.webp" alt="Black Kite Brewery Roulette Blind Box, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -733,7 +732,7 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/2124-artboard-2-1-1.webp" alt="Two Many Dollars DIPA, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -745,7 +744,7 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/2120-dsc08419.png" alt="Easy Glider Pale Ale, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -757,7 +756,7 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/1200-artboard-2-1.webp" alt="Black Kite Graphic Tee, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -769,7 +768,7 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/1135-blue-taxi-pp.png" alt="Blue Taxi Cold IPA, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -781,7 +780,7 @@
       </article>
 
       <article class="card mini">
-        <a class="product-link" href="#"">
+        <a class="product-link" href="#">
           <figure class="card-media">
             <img src="assets/92-dsc08374-1.png" alt="Birds of Prey IPA, product still" width="600" height="800" loading="eager" decoding="async">
           </figure>
@@ -803,26 +802,11 @@
 
 <script>
 (function(){
-  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  document.querySelectorAll(".row-film video").forEach(function(v){
-    v.muted=true;
-    if(reduce){
-      v.removeAttribute("autoplay");
-      v.pause();
-    } else {
-      v.play().catch(function(){});
-    }
-  });
-})();
-</script>
-
-
-<script>
-(function(){
   document.querySelectorAll('a[href="#"]').forEach(function(a){
-    a.addEventListener("click", function(ev){ ev.preventDefault(); });
+    a.addEventListener('click', function(e){ e.preventDefault(); });
   });
 })();
 </script>
+
 </body>
 </html>
