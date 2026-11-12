@@ -1,7 +1,7 @@
 <!--
   t580u · t579u · t579s2209 · t300u · t199u · t183u · t179u · t167u · Soft HOLD · claim_ge_99=false · mockup FIRST nothing staging/WP/live.
-  Copy of the t300 Graza pack, tightened in this folder only. No lifestyle hero. No hover video. Cards stay stills.
-  Three unique non-hover row films (official stills + SOURCE_COPY lines, ffmpeg/still compositing only).
+  Copy of the t78u Graza pack, amended in this folder only. No lifestyle hero. No typographic film hero.
+  Newly Released uses official hover clips copied from the t78u cooler tree; not remade.
   Product / Shop / Buy beer links keep existing https://blackkite.hk/bkstaging/… hrefs (not a site apply).
   Flower Market is a tomato gose, not an IPA. Unpack, zip, and t354/t382 folders were not edited.
 -->
@@ -178,43 +178,11 @@
     border:0;
   }
 
-  .row-film{
-    position:relative;
-    width:100%;
-    height:auto;
-    aspect-ratio:1280/400;
-    margin:0 0 1.25rem;
-    overflow:hidden;
-    background:var(--ground);
-    border:1px solid var(--line-soft);
-  }
-
-  .row-film-poster,
-  .row-film video{
-    display:block;
-    width:100%;
-    height:auto;
-    aspect-ratio:1280/400;
-    object-fit:contain;
-    object-position:center center;
-    background:var(--ground);
-  }
-
-  .row-film video{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:contain;
-  }
-
   .band-b-tight{
     display:grid;
     grid-template-columns:repeat(2,minmax(0,1fr));
     gap:.9rem;
   }
-
-  .band-b-tight + .row-film{margin-top:1.25rem;}
 
   .band-b-tight + .band-b{margin-top:.9rem;}
 
@@ -432,7 +400,35 @@
       transition-duration:.001ms !important;
       scroll-behavior:auto !important;
     }
-    .row-film video{display:none;}
+  }
+
+  .card-hover-video{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center bottom;
+    opacity:0;
+    pointer-events:none;
+    background:var(--tile);
+  }
+  @media (hover:hover) and (pointer:fine){
+    .card.has-hover-video:hover .card-hover-video,
+    .card.has-hover-video:focus-within .card-hover-video{opacity:1;}
+  }
+  .card.has-hover-video.is-playing .card-hover-video{opacity:1;}
+  @media (prefers-reduced-motion:reduce){
+    .card-hover-video{display:none;}
+  }
+
+  /* First view is header + banner + Newly Released only; All beers starts below. */
+  .section[aria-labelledby="newly-released"]{
+    min-height:calc(100svh - 7.25rem);
+    box-sizing:border-box;
   }
 </style>
 </head>
@@ -468,32 +464,38 @@
 
     <div class="band-a">
 
-      <article class="card">
+      <article class="card has-hover-video">
         <a class="product-link" href="#">
           <figure class="card-media">
-            <img src="assets/3166-iron-goddess-shop-product-shot.png" alt="Iron Goddess, product still" width="800" height="1000" loading="eager" fetchpriority="high" decoding="async">
+            <img src="assets/3144-tanager-product-shot.png" alt="Flaming Tanager, product still" width="800" height="1000" loading="eager" fetchpriority="high" decoding="async">
+            <video class="card-hover-video" muted loop playsinline webkit-playsinline preload="auto" aria-hidden="true">
+              <source src="assets/hover-flaming-tanager-story.mp4" type="video/mp4">
+            </video>
           </figure>
           <div class="card-body">
-            <p class="eyebrow">Collab sour</p>
-            <h3 class="card-title">Iron Goddess</h3>
-            <p class="promise">Holy Goat collab · strawberries &amp; oolong</p>
+            <p class="eyebrow">Tropical Pale Ale</p>
+            <h3 class="card-title">Flaming Tanager</h3>
+            <p class="promise">Bright tropical hops, easy can</p>
             <div class="card-foot">
-              <span class="price">HKD 125</span>
+              <span class="price">HKD 35</span>
               <a class="chip" href="#">Buy beer</a>
             </div>
           </div>
         </a>
       </article>
 
-      <article class="card">
+      <article class="card has-hover-video">
         <a class="product-link" href="#">
           <figure class="card-media">
-            <img src="assets/3155-flower-market-product-shot.png" alt="Flower Market, product still" width="800" height="1000" loading="eager" decoding="async">
+            <img src="assets/2124-artboard-2-1-1.webp" alt="Two Many Dollars DIPA, product still" width="800" height="1000" loading="eager" decoding="async">
+            <video class="card-hover-video" muted loop playsinline webkit-playsinline preload="auto" poster="assets/hover-two-many-dollars-poster.jpg" aria-hidden="true">
+              <source src="assets/hover-two-many-dollars-web.mp4" type="video/mp4">
+            </video>
           </figure>
           <div class="card-body">
-            <p class="eyebrow">Tomato Gose</p>
-            <h3 class="card-title">Flower Market</h3>
-            <p class="promise">Savoury-sour, market-stall vibe</p>
+            <p class="eyebrow">DIPA</p>
+            <h3 class="card-title">Two Many Dollars DIPA</h3>
+            <p class="promise">Two Many Dollars DIPA 8.8% ABV | 88 IBU</p>
             <div class="card-foot">
               <span class="price">HKD 32</span>
               <a class="chip" href="#">Buy beer</a>
@@ -502,17 +504,20 @@
         </a>
       </article>
 
-      <article class="card">
+      <article class="card has-hover-video">
         <a class="product-link" href="#">
           <figure class="card-media">
-            <img src="assets/3149-heron-product-shot.png" alt="Heron Hallertau Single Hop IPA, product still" width="800" height="1000" loading="eager" decoding="async">
+            <img src="assets/92-dsc08374-1.png" alt="Birds of Prey IPA, product still" width="800" height="1000" loading="eager" decoding="async">
+            <video class="card-hover-video" muted loop playsinline webkit-playsinline preload="auto" poster="assets/hover-birds-of-prey-poster.jpg" aria-hidden="true">
+              <source src="assets/hover-birds-of-prey-web.mp4" type="video/mp4">
+            </video>
           </figure>
           <div class="card-body">
-            <p class="eyebrow">Single Hop IPA</p>
-            <h3 class="card-title">Heron</h3>
-            <p class="promise">Single Hop IPA 6.2% ABV | 35 IBU</p>
+            <p class="eyebrow">IPA</p>
+            <h3 class="card-title">Birds of Prey IPA</h3>
+            <p class="promise">Birds of Prey IPA 5.7% ABV | 45 IBU</p>
             <div class="card-foot">
-              <span class="price">HKD 35</span>
+              <span class="price">HKD 32</span>
               <a class="chip" href="#">Buy beer</a>
             </div>
           </div>
@@ -808,5 +813,64 @@
 })();
 </script>
 
+
+<script>
+  (function () {
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    document.querySelectorAll(".card.has-hover-video").forEach(function (card) {
+      var v = card.querySelector(".card-hover-video");
+      if (!v) return;
+      v.muted = true;
+      if (reduce) return;
+      if (fine) {
+        function play() { v.play().catch(function () {}); }
+        function stop() { v.pause(); try { v.currentTime = 0; } catch (e) {} }
+        card.addEventListener("mouseenter", play);
+        card.addEventListener("mouseleave", stop);
+        card.addEventListener("focusin", play);
+        card.addEventListener("focusout", function () { if (!card.matches(":hover")) stop(); });
+      } else {
+        function play() {
+          card.classList.add("is-playing");
+          v.play().catch(function () {});
+        }
+        function stop() {
+          card.classList.remove("is-playing");
+          v.pause();
+          try { v.currentTime = 0; } catch (e) {}
+        }
+        function stopOthers() {
+          document.querySelectorAll(".card.has-hover-video.is-playing").forEach(function (other) {
+            if (other === card) return;
+            other.classList.remove("is-playing");
+            var ov = other.querySelector(".card-hover-video");
+            if (!ov) return;
+            ov.pause();
+            try { ov.currentTime = 0; } catch (e) {}
+          });
+        }
+        card.addEventListener("click", function (ev) {
+          if (ev.target.closest("a.chip")) return;
+          ev.preventDefault();
+          ev.stopPropagation();
+          if (card.classList.contains("is-playing")) stop();
+          else { stopOthers(); play(); }
+        });
+        document.addEventListener("click", function (ev) {
+          if (!card.contains(ev.target) && card.classList.contains("is-playing")) stop();
+        });
+        if ("IntersectionObserver" in window) {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+              if (!en.isIntersecting && card.classList.contains("is-playing")) stop();
+            });
+          }, { threshold: 0 });
+          io.observe(card);
+        }
+      }
+    });
+  })();
+</script>
 </body>
 </html>
